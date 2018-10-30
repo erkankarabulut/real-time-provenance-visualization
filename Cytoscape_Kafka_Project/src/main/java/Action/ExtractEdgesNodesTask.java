@@ -32,7 +32,6 @@ public class ExtractEdgesNodesTask extends AbstractTask{
             process.waitFor();
             // Setting status after extracting
 
-            System.out.println("Path: " + path);
             cytoVisProject.getMyControlPanel().setStatus("Files are extracted to C:/provoTransformerPlugin.");
         } catch (Exception es) {
             JOptionPane.showMessageDialog(this.adapter.getCySwingApplication().getJFrame(),

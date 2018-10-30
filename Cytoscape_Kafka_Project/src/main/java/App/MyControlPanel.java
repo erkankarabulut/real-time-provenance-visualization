@@ -2,13 +2,8 @@ package App;
 
 import Base.*;
 import Action.*;
-import Util.BackwardDependency;
-import Util.FilterUtil;
+import Util.*;
 
-import Util.NetworkViewOrganizer;
-import Util.Subscriber;
-import cytoscape.generated.Network;
-import jdk.nashorn.internal.scripts.JO;
 import org.cytoscape.app.swing.CySwingAppAdapter;
 import org.cytoscape.application.CyApplicationManager;
 import org.cytoscape.application.swing.CytoPanelComponent;
@@ -25,7 +20,6 @@ import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.BevelBorder;
 import javax.swing.event.ChangeEvent;
@@ -33,12 +27,10 @@ import javax.swing.event.ChangeListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 public class MyControlPanel extends JPanel implements CytoPanelComponent{
 
@@ -50,6 +42,7 @@ public class MyControlPanel extends JPanel implements CytoPanelComponent{
     private SliderVisualization sliderVisualization;
     private CompareGraphsCore compareGraphsCore;
     private DrawComparedGraphs drawComparedGraphs;
+    private BackwardDependencyVol2 backwardDependencyVol2;
     private BackwardDependency backwardDependency;
 
     private List<String> nodeTypes;
@@ -170,6 +163,7 @@ public class MyControlPanel extends JPanel implements CytoPanelComponent{
     public MyControlPanel(CytoVisProject cytoVisProject){
         super();
         // Initializing Variables and Tools
+        backwardDependencyVol2 = new BackwardDependencyVol2();
         backwardDependency = new BackwardDependency();
         cytoPanelHeight = (Toolkit.getDefaultToolkit().getScreenSize().height * 0.81);
         cytoPanelWidth = (Toolkit.getDefaultToolkit().getScreenSize().width * 0.20);
@@ -195,6 +189,10 @@ public class MyControlPanel extends JPanel implements CytoPanelComponent{
 
     // This will initialize all the tools which will be on the control panel
     public void initializeToolbox(){
+        if(this.backwardDependencyVol2 == null){
+            this.backwardDependencyVol2 = new BackwardDependencyVol2();
+        }
+
         if(this.backwardDependency == null){
             this.backwardDependency = new BackwardDependency();
         }
@@ -739,7 +737,7 @@ public class MyControlPanel extends JPanel implements CytoPanelComponent{
         });
         // Setting action to "Import Network" button
         this.importNetworkButton.setAction(new ImportEdgesAction(cytoVisProject, "C:\\provoTransformerPlugin\\edges.csv"));
-        this.importNetworkButton.addMouseListener(new ImportEdgesRightClickAction(cytoVisProject, this.backwardDependency));
+        this.importNetworkButton.addMouseListener(new ImportEdgesRightClickAction(cytoVisProject, this.backwardDependencyVol2));
 
         // Setting action to "Import Visual Style" Button
         this.importTableButton.setAction(new ImportNodesAction(cytoVisProject, "C:\\provoTransformerPlugin\\nodes.csv"));
@@ -1151,23 +1149,22 @@ public class MyControlPanel extends JPanel implements CytoPanelComponent{
                 ArrayList<String> nodesToBeShown        = new ArrayList<>();
                 List<CyNode> allNodes                   = adapter.getCyApplicationManager().getCurrentNetwork().getNodeList();
 
-                System.out.println("[" + new SimpleDateFormat( "yyyy-MM-dd HH:mm:ss" ).format(new Date()) + "] Selected Nodes: " + selectedNodeIdList.toString());
+                long startTime = System.currentTimeMillis();
                 for (String nodeId : selectedNodeIdList){
-                    nodesToBeShown.addAll(backwardDependency.getBackwardProvenance(nodeId, backwardDependency.getStateCurrent(),
-                            backwardDependency.getRowsCurrent(), backwardDependency.getColumnsCurrent()));
-
-                    System.out.println("[" + new SimpleDateFormat( "yyyy-MM-dd HH:mm:ss" ).format(new Date()) + "] Backward Dependencies of " + nodeId + ": " + backwardDependency.getBackwardProvenance(nodeId, backwardDependency.getStateCurrent(),
-                            backwardDependency.getRowsCurrent(), backwardDependency.getColumnsCurrent()).toString());
+                    nodesToBeShown.addAll(backwardDependencyVol2.getBackwardProvenance(nodeId, backwardDependencyVol2.getStateCurrent(), new ArrayList<>()));
                 }
+
+                System.out.println("[" + new SimpleDateFormat( "yyyy-MM-dd HH:mm:ss" ).format(new Date()) + "] Total time to get backward provenance of " + selectedNodeIdList.size() + " nodes: "
+                        + (System.currentTimeMillis() - startTime) + " ms.");
 
                 nodesToBeShown.addAll(selectedNodeIdList);
                 for(CyNode node : allNodes){
                     if(!nodesToBeShown.contains(filterUtil.getNodeId(node, adapter, "name"))){
-                        System.out.println("[" + new SimpleDateFormat( "yyyy-MM-dd HH:mm:ss" ).format(new Date()) + "] " + filterUtil.getNodeId(node, adapter, "name")
-                            + " is hided.");
                         adapter.getCyApplicationManager().getCurrentNetworkView().getNodeView(node).setVisualProperty(BasicVisualLexicon.NODE_VISIBLE, false);
                     }
                 }
+
+                filterUtil.deSelectAllNodes(adapter);
             }
         });
 
@@ -1175,14 +1172,13 @@ public class MyControlPanel extends JPanel implements CytoPanelComponent{
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 List<CyNode> allNodes = adapter.getCyApplicationManager().getCurrentNetwork().getNodeList();
-                List<CyEdge> allEdges = adapter.getCyApplicationManager().getCurrentNetwork().getEdgeList();
 
-                for(CyNode node : allNodes){
-                    adapter.getCyApplicationManager().getCurrentNetworkView().getNodeView(node).setVisualProperty(BasicVisualLexicon.NODE_VISIBLE, true);
-                }
-
-                for(CyEdge edge : allEdges){
-                    adapter.getCyApplicationManager().getCurrentNetworkView().getEdgeView(edge).setVisualProperty(BasicVisualLexicon.NODE_VISIBLE, true);
+                for(int i=0;i<allNodes.size();i++){
+                    adapter.getCyApplicationManager().getCurrentNetworkView().getNodeView(allNodes.get(i)).setVisualProperty(BasicVisualLexicon.NODE_VISIBLE,true);
+                    List<CyEdge> edges = adapter.getCyApplicationManager().getCurrentNetwork().getAdjacentEdgeList(allNodes.get(i), CyEdge.Type.ANY);
+                    for(CyEdge edge : edges){
+                        adapter.getCyApplicationManager().getCurrentNetworkView().getEdgeView(edge).setVisualProperty(BasicVisualLexicon.EDGE_VISIBLE, true);
+                    }
                 }
 
                 adapter.getCyApplicationManager().getCurrentNetworkView().updateView();
@@ -1487,6 +1483,14 @@ public class MyControlPanel extends JPanel implements CytoPanelComponent{
 
     public void setImportTableButton(JButton importTableButton) {
         this.importTableButton = importTableButton;
+    }
+
+    public BackwardDependencyVol2 getBackwardDependencyVol2() {
+        return backwardDependencyVol2;
+    }
+
+    public void setBackwardDependencyVol2(BackwardDependencyVol2 backwardDependencyVol2) {
+        this.backwardDependencyVol2 = backwardDependencyVol2;
     }
 
     public BackwardDependency getBackwardDependency() {

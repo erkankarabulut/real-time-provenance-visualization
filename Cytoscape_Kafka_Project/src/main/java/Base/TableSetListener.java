@@ -2,11 +2,10 @@ package Base;
 
 import App.CytoVisProject;
 import App.MyControlPanel;
-import Util.BackwardDependency;
+import Util.BackwardDependencyVol2;
 import Util.FilterUtil;
 import org.cytoscape.app.swing.CySwingAppAdapter;
 import org.cytoscape.model.*;
-import org.cytoscape.model.events.RowSetRecord;
 import org.cytoscape.model.events.RowsSetEvent;
 import org.cytoscape.model.events.RowsSetListener;
 
@@ -18,9 +17,9 @@ public class TableSetListener implements RowsSetListener {
     private CySwingAppAdapter adapter;
     private CytoVisProject cytoVisProject;
     private MyControlPanel myControlPanel;
-    private BackwardDependency dependency;
+    private BackwardDependencyVol2 dependency;
 
-    public TableSetListener(CytoVisProject cytoVisProject, BackwardDependency dependency) {
+    public TableSetListener(CytoVisProject cytoVisProject, BackwardDependencyVol2 dependency) {
         // Initializations
         this.cytoVisProject = cytoVisProject;
         this.adapter        = cytoVisProject.getAdapter();

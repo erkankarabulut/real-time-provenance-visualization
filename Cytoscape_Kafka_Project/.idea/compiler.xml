@@ -12,7 +12,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="CyCurly" target="1.5" />
-      <module name="CytoVisProject" target="7" />
+      <module name="CytoVisProject" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

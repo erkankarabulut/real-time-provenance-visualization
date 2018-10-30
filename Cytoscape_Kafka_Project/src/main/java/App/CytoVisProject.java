@@ -6,7 +6,6 @@ import org.cytoscape.app.swing.AbstractCySwingApp;
 import org.cytoscape.app.swing.CySwingAppAdapter;
 import org.cytoscape.application.swing.CyAction;
 import org.cytoscape.application.swing.CytoPanelComponent;
-import org.cytoscape.io.webservice.events.DataImportFinishedListener;
 import org.cytoscape.model.events.AddedEdgesListener;
 import org.cytoscape.model.events.NetworkDestroyedListener;
 import org.cytoscape.model.events.RowsSetListener;
@@ -30,7 +29,7 @@ public class CytoVisProject extends AbstractCySwingApp{
         ControlPanelAction controlPanelAction = new ControlPanelAction(adapter.getCySwingApplication(),myControlPanel,adapter);
         adapter.getCyServiceRegistrar().registerService(controlPanelAction, CyAction.class,new Properties());
         // Creating and registering a new RowsSetListener
-        this.tableSetListener = new TableSetListener(this, myControlPanel.getBackwardDependency());
+        this.tableSetListener = new TableSetListener(this, myControlPanel.getBackwardDependencyVol2());
         adapter.getCyServiceRegistrar().registerService(tableSetListener, RowsSetListener.class,new Properties());
         // Creating and registering a new NetworkDestroyedListener
         NetworkDeletedListener networkDeletedListener = new NetworkDeletedListener(this);

@@ -149,6 +149,13 @@ public class FilterUtil {
         return selectedNodeIdList;
     }
 
+    public void deSelectAllNodes(CySwingAppAdapter adapter){
+        List<CyRow> allRows = adapter.getCyApplicationManager().getCurrentNetwork().getDefaultNodeTable().getAllRows();
+        for(CyRow row : allRows){
+            row.set("selected", false);
+        }
+    }
+
     // Get neighbours of the nodes that id list's is given in the arraylist
     public ArrayList<CyNode> getNeighbourList(CySwingAppAdapter adapter, ArrayList<String> nodesToFindNeighbours){
         ArrayList<CyNode> neighbours = new ArrayList<>();

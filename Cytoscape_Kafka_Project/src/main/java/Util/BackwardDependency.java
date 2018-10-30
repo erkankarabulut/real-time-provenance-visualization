@@ -43,49 +43,6 @@ public class BackwardDependency {
         uniqueNodeId            = new Integer(0);
     }
 
-    /*public void main(String[] args){
-        currentColumnCount      = 1;
-        currentRowCount         = 1;
-        stateCurrent            = new Integer[currentRowCount][currentColumnCount];
-        statePurge              = new Integer[currentRowCount][currentColumnCount];
-        varIdToNodeIdCurrent    = new HashMap<>();
-        varIdToNodeIdPurge      = new HashMap<>();
-        rowsCurrent             = new ArrayList<>();
-        columnsCurrent          = new ArrayList<>();
-        rowsPurge               = new ArrayList<>();
-        columnsPurge            = new ArrayList<>();
-
-        try {
-            Element node =  DocumentBuilderFactory
-                    .newInstance()
-                    .newDocumentBuilder()
-                    .parse(new ByteArrayInputStream(("<prov:wasAssociatedWith>\n" +
-                            "\t<prov:activity prov:ref=\"Process_33000\"/>\n" +
-                            "\t<prov:agent prov:ref=\"Agent_001\"/>\n" +
-                            "</prov:wasAssociatedWith>").getBytes()))
-                    .getDocumentElement();
-
-            updateState(node, "nodeId1", "nodeId2");
-            printMatrix(stateCurrent);
-            printMatrix(statePurge);
-
-            node = DocumentBuilderFactory
-                    .newInstance()
-                    .newDocumentBuilder()
-                    .parse(new ByteArrayInputStream(("<prov:wasInformedBy>\n" +
-                            "\t<prov:informed prov:ref=\"Process_237867\"/>\n" +
-                            "\t<prov:informant prov:ref=\"Process_33000\"/>\n" +
-                            "</prov:wasInformedBy>").getBytes())).getDocumentElement();
-            updateState(node, "nodeId3", "nodeId4");
-
-            printMatrix(stateCurrent);
-            printMatrix(statePurge);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-
-    }*/
-
     public void printMatrix(ArrayList<ArrayList<Integer>> matrix){
         for(ArrayList<Integer> row : matrix){
             for(Integer cell : row){
@@ -105,14 +62,28 @@ public class BackwardDependency {
         String sourceNode;
         String destNode;
         ArrayList<String> inputVars;
-        String node1Id = (uniqueNodeId++).toString();
-        String node2Id = (uniqueNodeId++).toString();
+        String node1Id;
+        String node2Id;
+
+        if(varIdToNodeIdCurrent.containsKey(source)){
+            node1Id = varIdToNodeIdCurrent.get(source);
+        }else {
+            node1Id = (uniqueNodeId++).toString();
+        }
+
+        if(varIdToNodeIdCurrent.containsKey(destination)){
+            node2Id = varIdToNodeIdCurrent.get(destination);
+        }else {
+            node2Id = (uniqueNodeId++).toString();
+        }
 
         // get source and destination nodes
         sourceNode   = source;
         destNode     = destination;
 
-        System.out.println("[" + new SimpleDateFormat( "yyyy-MM-dd HH:mm:ss" ).format(new Date()) + "]\n" + "Initial State:");
+        /*System.out.println("[" + new SimpleDateFormat( "yyyy-MM-dd HH:mm:ss" ).format(new Date()) + "] Backward Dependency Vol1\n" + "Initial State:");
+        System.out.println("Var Id to Node Id List: " + varIdToNodeIdCurrent.keySet().toString() + varIdToNodeIdCurrent.values().toArray().toString() + "\n" +
+                "Node1ID: " + node1Id + "\nNode2ID: " + node2Id + "\n\n");
         System.out.println("Current Rows: " + rowsCurrent.toString());
         System.out.println("Current Columns: " + columnsCurrent.toString());
 
@@ -125,7 +96,7 @@ public class BackwardDependency {
         System.out.println("Purge Matrix:");
         printMatrix(statePurge);
 
-        System.out.println("[" + new SimpleDateFormat( "yyyy-MM-dd HH:mm:ss" ).format(new Date()) + "] New edge --> Source: " + sourceNode + " ->> Destination: " + destNode);
+        System.out.println("[" + new SimpleDateFormat( "yyyy-MM-dd HH:mm:ss" ).format(new Date()) + "] New edge --> Source: " + sourceNode + " ->> Destination: " + destNode);*/
         // if incoming source node is a new value of a variable then cache current state and remove source node from current stat
         if(varIdToNodeIdCurrent.containsKey(sourceNode) && varIdToNodeIdCurrent.get(sourceNode) != node1Id){
             for(int i=0; i<rowsCurrent.size(); i++){
@@ -166,9 +137,9 @@ public class BackwardDependency {
 
         // If source node equals to destNode then get backward provenance from state.purge, else get it from state.current
         if(sourceNode.equals(destNode)){
-            inputVars = getBackwardProvenance(destNode, statePurge, rowsPurge, columnsPurge);
+            inputVars = getBackwardProvenance(destNode, statePurge, rowsPurge, columnsPurge, new ArrayList<String>());
         }else {
-            inputVars = getBackwardProvenance(destNode, stateCurrent, rowsCurrent, columnsCurrent);
+            inputVars = getBackwardProvenance(destNode, stateCurrent, rowsCurrent, columnsCurrent, new ArrayList<String>());
         }
 
         // Update backward provenance of source node in state.current
@@ -176,7 +147,7 @@ public class BackwardDependency {
             stateCurrent.get(rowsCurrent.indexOf(sourceNode)).set(columnsCurrent.indexOf(var), 1);
         }
 
-        System.out.println("[" + new SimpleDateFormat( "yyyy-MM-dd HH:mm:ss" ).format(new Date()) + "]\n" + "Last State:");
+        /*System.out.println("[" + new SimpleDateFormat( "yyyy-MM-dd HH:mm:ss" ).format(new Date()) + "]\n" + "Last State:");
         System.out.println("Current Rows: " + rowsCurrent.toString());
         System.out.println("Current Columns: " + columnsCurrent.toString());
 
@@ -187,26 +158,26 @@ public class BackwardDependency {
         printMatrix(stateCurrent);
 
         System.out.println("Purge Matrix:");
-        printMatrix(statePurge);
+        printMatrix(statePurge);*/
     }
 
     // Bütün bir satır çekilemez mi??
-    public ArrayList<String> getBackwardProvenance(String varId, ArrayList<ArrayList<Integer>> matrix, ArrayList<String> sourceList, ArrayList<String> columns){
+    public ArrayList<String> getBackwardProvenance(String varId, ArrayList<ArrayList<Integer>> matrix, ArrayList<String> sourceList, ArrayList<String> columns, ArrayList<String> resultList){
 
-        ArrayList<String> result    = new ArrayList<>();
         Integer varIndex            = sourceList.indexOf(varId);
 
         if(varIndex < 0){
-            return result;
+            return resultList;
         }
 
         for(int i=0; i<columns.size(); i++){
-            if(matrix.get(varIndex).get(i) == 1){
-                result.add(columns.get(i));
+            if(matrix.get(varIndex).get(i) == 1 && !resultList.contains(columns.get(i))){
+                resultList.add(columns.get(i));
+                resultList = getBackwardProvenance(columns.get(i), matrix, sourceList, columns, resultList);
             }
         }
 
-        return result;
+        return resultList;
     }
 
     // Cache dependencies that removed from state.current
@@ -220,117 +191,6 @@ public class BackwardDependency {
         statePurge.add(stateCurrent.get(rowToCash));
         columnsPurge    = columnsCurrent;
     }
-
-/*    // Remove a row from a matrix
-    public Integer[][] removeRow(Integer i, Integer[][] matrix){
-        for(int j=i; j<matrix.length-1; j++){
-            matrix[j] = matrix[j+1];
-        }
-
-        currentRowCount--;
-        return matrix;
-    }*/
-
-    // Find source node Id
-    /*public String getSourceNodeId(Node element, String relationType){
-        String result           = new String();
-        String sourceNodeString = new String();
-
-        switch (relationType){
-            case "wasAssociatedWith":
-                sourceNodeString = "activity";
-                break;
-            case "wasInformedBy":
-                sourceNodeString = "informed";
-                break;
-            case "used":
-                sourceNodeString = "activity";
-                break;
-            case "wasDerivedFrom":
-                sourceNodeString = "generatedEntity";
-                break;
-            case "wasGeneratedBy":
-                sourceNodeString = "entity";
-                break;
-        }
-
-        for(int i=0; i<element.getChildNodes().getLength(); i++){
-            if(element.getChildNodes().item(i).getNodeName().contains(sourceNodeString)){
-                result = element.getChildNodes().item(i).getAttributes().getNamedItem("prov:ref").getNodeValue();
-                break;
-            }
-        }
-
-        return result;
-    }*/
-
-    // Find destination node Id
-    /*public String getDestNodeId(Node element, String relationType){
-        String result           = new String();
-        String sourceNodeString = new String();
-
-        switch (relationType){
-            case "wasAssociatedWith":
-                sourceNodeString = "agent";
-                break;
-            case "wasInformedBy":
-                sourceNodeString = "informant";
-                break;
-            case "used":
-                sourceNodeString = "entity";
-                break;
-            case "wasDerivedFrom":
-                sourceNodeString = "usedEntity";
-                break;
-            case "wasGeneratedBy":
-                sourceNodeString = "activity";
-                break;
-        }
-
-        for(int i=0; i<element.getChildNodes().getLength(); i++){
-            if(element.getChildNodes().item(i).getNodeName().contains(sourceNodeString)){
-                result = element.getChildNodes().item(i).getAttributes().getNamedItem("prov:ref").getNodeValue();
-                break;
-            }
-        }
-
-        return result;
-    }*/
-
-    // https://stackoverflow.com/questions/27728550/resize-primitive-2d-array/27728645#27728645
-    // It used to increase or decrease size of a matrix
-    /*public Integer[][] resize(Integer[][] matrix, int w, int h) {
-        Integer[][] temp = new Integer[w][h];
-
-        for(int i=0;i<w; i++){
-            for(int j=0;j<h;j++){
-                temp[i][j] = 0;
-            }
-        }
-
-        h = Math.min(h, matrix.length);
-        w = Math.min(w, matrix[0].length);
-        for (int i = 0; i < h; i++)
-            System.arraycopy(matrix[i], 0, temp[i], 0, w);
-
-        return temp;
-    }*/
-
-    /*public Integer[][] getStateCurrent() {
-        return stateCurrent;
-    }
-
-    public void setStateCurrent(Integer[][] stateCurrent) {
-        this.stateCurrent = stateCurrent;
-    }
-
-    public Integer[][] getStatePurge() {
-        return statePurge;
-    }
-
-    public void setStatePurge(Integer[][] statePurge) {
-        this.statePurge = statePurge;
-    }*/
 
     public ArrayList<String> getRowsCurrent() {
         return rowsCurrent;
