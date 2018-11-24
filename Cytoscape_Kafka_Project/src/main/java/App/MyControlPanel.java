@@ -1023,7 +1023,9 @@ public class MyControlPanel extends JPanel implements CytoPanelComponent{
         compareGraphsButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent actionEvent) {
                 compareGraphsCore.createAttendanceList();
-                compareGraphsCore.findSimilarNodePairs();
+                /*compareGraphsCore.findSimilarNodePairsWithBruteForce();
+                compareGraphsCore.findSimilarNodePairsWithSorting();*/
+                compareGraphsCore.findSimilarNodePairsWithGreedyApproach();
                 drawComparedGraphs.changeColors(compareGraphsCore);
             }
         });

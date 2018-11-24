@@ -18,15 +18,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BackwardDependencyVol2.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Util/BackwardDependencyVol2.java">
+      <file leaf-file-name="CompareGraphsCore.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Base/CompareGraphsCore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
-              <caret line="131" column="4" selection-start-line="131" selection-start-column="4" selection-end-line="131" selection-end-column="4" />
+            <state relative-caret-position="-183">
+              <caret line="196" column="29" lean-forward="true" selection-start-line="196" selection-start-column="29" selection-end-line="196" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4541#4542#0" expanded="true" />
-                <element signature="e#4611#4612#0" expanded="true" />
+                <element signature="e#1998#2680#0" />
+                <element signature="e#2686#3386#0" />
+                <element signature="e#3392#4094#0" />
+                <element signature="e#4100#4801#0" />
+                <element signature="e#43037#43038#0" expanded="true" />
+                <element signature="e#43076#43077#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -36,59 +40,7 @@
         <entry file="file://$PROJECT_DIR$/META-INF/MANIFEST.MF">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BackwardDependency.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Util/BackwardDependency.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="77" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#12330#12331#0" expanded="true" />
-                <element signature="e#12364#12365#0" expanded="true" />
-                <element signature="e#12429#12430#0" expanded="true" />
-                <element signature="e#12475#12476#0" expanded="true" />
-                <element signature="e#12527#12528#0" expanded="true" />
-                <element signature="e#12564#12565#0" expanded="true" />
-                <element signature="e#12635#12636#0" expanded="true" />
-                <element signature="e#12687#12688#0" expanded="true" />
-                <element signature="e#12734#12735#0" expanded="true" />
-                <element signature="e#12766#12767#0" expanded="true" />
-                <element signature="e#12827#12828#0" expanded="true" />
-                <element signature="e#12869#12870#0" expanded="true" />
-                <element signature="e#12919#12920#0" expanded="true" />
-                <element signature="e#12954#12955#0" expanded="true" />
-                <element signature="e#13021#13022#0" expanded="true" />
-                <element signature="e#13069#13070#0" expanded="true" />
-                <element signature="e#13133#13134#0" expanded="true" />
-                <element signature="e#13176#13177#0" expanded="true" />
-                <element signature="e#13391#13392#0" expanded="true" />
-                <element signature="e#13432#13433#0" expanded="true" />
-                <element signature="e#13639#13640#0" expanded="true" />
-                <element signature="e#13674#13675#0" expanded="true" />
-                <element signature="e#13753#13754#0" expanded="true" />
-                <element signature="e#13801#13802#0" expanded="true" />
-                <element signature="e#13861#13862#0" expanded="true" />
-                <element signature="e#13894#13895#0" expanded="true" />
-                <element signature="e#13969#13970#0" expanded="true" />
-                <element signature="e#14013#14014#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImportEdgesRightClickAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Action/ImportEdgesRightClickAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="59" column="40" selection-start-line="59" selection-start-column="40" selection-end-line="59" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -96,21 +48,17 @@
       <file leaf-file-name="MyControlPanel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/App/MyControlPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="1151" column="60" selection-start-line="1151" selection-start-column="60" selection-end-line="1151" selection-end-column="60" />
-              <folding>
-                <element signature="e#71897#71898#0" expanded="true" />
-                <element signature="e#71938#71939#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="548">
+              <caret line="1027" column="44" lean-forward="true" selection-start-line="1027" selection-start-column="44" selection-end-line="1027" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EdgesAddedListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Base/EdgesAddedListener.java">
+      <file leaf-file-name="DrawComparedGraphs.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Action/DrawComparedGraphs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+            <state relative-caret-position="342">
+              <caret line="104" column="61" lean-forward="true" selection-start-line="104" selection-start-column="61" selection-end-line="104" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -126,36 +74,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find />
-      <find>------</find>
-      <find>getBackwardprovenancebutton.</find>
-      <find>getBackwardprovenancebutton</find>
-      <find>getBackwardProvenanceButton</find>
-      <find>htm</find>
-      <find>html</find>
-      <find>&lt;br</find>
-      <find>.csv</find>
-      <find>e</find>
-      <find>home</find>
-      <find>csv</find>
-      <find>c</find>
-      <find>ex</find>
-      <find>-o</find>
-      <find>node1Id</find>
-      <find>updatestate</find>
-      <find>system.out</find>
-      <find>Path:</find>
-      <find>total time get back</find>
-      <find>backward dep</find>
-      <find>backwardDependencyVol2</find>
-      <find>.updatestate</find>
-      <find>rightclick</find>
-      <find>getbackwarddepen</find>
-      <find>back</find>
       <find>selected nodes:</find>
       <find>getBackwardProvenance</find>
       <find>getbackwardprovenance</find>
       <find>getbackward</find>
+      <find>d</find>
+      <find>dca</find>
+      <find>direct</find>
+      <find>readgra</find>
+      <find>comparegra</find>
+      <find>read</find>
+      <find>readf</find>
+      <find>node1path</find>
+      <find>node1Path</find>
+      <find>readg</find>
+      <find>chen</find>
+      <find>importgraphsbutt</find>
+      <find>comparegraphs</find>
+      <find>nodePropertyWeight</find>
+      <find>isFirstForBigger</find>
+      <find>comparegraphschen</find>
+      <find>changeFile</find>
+      <find>changefi</find>
+      <find>compareGraphsButton</find>
+      <find>algorithm</find>
+      <find>nodepair</find>
+      <find>nodePairArray</find>
+      <find>getatt</find>
+      <find>compareAllProperties</find>
+      <find>system.out.print</find>
+      <find>atte</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -197,8 +145,6 @@
         <option value="$PROJECT_DIR$/src/main/java/Util/NetworkViewOrganizer.java" />
         <option value="$PROJECT_DIR$/src/main/java/Base/NodeAddedListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/Action/ImportNodesAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Base/CompareGraphsCore.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Action/DrawComparedGraphs.java" />
         <option value="$PROJECT_DIR$/src/main/java/Base/ExtractEdgesNodesTaskFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/BackwardDependency.java" />
         <option value="$PROJECT_DIR$/src/main/java/Base/EdgeAddedListener.java" />
@@ -219,8 +165,10 @@
         <option value="$PROJECT_DIR$/src/main/java/Util/BackwardDependency.java" />
         <option value="$PROJECT_DIR$/src/main/java/Action/ImportEdgesRightClickAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/Base/EdgesAddedListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/App/MyControlPanel.java" />
         <option value="$PROJECT_DIR$/src/main/java/Util/BackwardDependencyVol2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Action/DrawComparedGraphs.java" />
+        <option value="$PROJECT_DIR$/src/main/java/App/MyControlPanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Base/CompareGraphsCore.java" />
       </list>
     </option>
   </component>
@@ -255,9 +203,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -310,13 +255,16 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="man&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/META-INF/MANIFEST.MF&#10;edgeadded&#9;PSI&#9;JAVA://Base.EdgesAddedListener&#10;mycon&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/src/main/java/App/MyControlPanel.java&#10;imported&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/src/main/java/Action/ImportEdgesRightClickAction.java&#10;entity&#9;PSI&#9;JAVA://Action.EntityBasedSortingTask&#10;manife&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/META-INF/MANIFEST.MF&#10;manifest&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/META-INF/MANIFEST.MF&#10;show&#9;PSI&#9;JAVA://Action.ShowOnlyTask&#10;mam&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/META-INF/MANIFEST.MF&#10;myco&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/src/main/java/App/MyControlPanel.java&#10;manif&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/META-INF/MANIFEST.MF&#10;edge&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/src/main/java/Action/ImportEdgesAction.java&#10;mani&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/META-INF/MANIFEST.MF&#10;pom&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/pom.xml&#10;tableset&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/src/main/java/Base/TableSetListener.java&#10;;&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="manif&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/META-INF/MANIFEST.MF&#10;manifes&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/META-INF/MANIFEST.MF&#10;man&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/META-INF/MANIFEST.MF&#10;edgeadded&#9;PSI&#9;JAVA://Base.EdgesAddedListener&#10;mycon&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/src/main/java/App/MyControlPanel.java&#10;imported&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/src/main/java/Action/ImportEdgesRightClickAction.java&#10;entity&#9;PSI&#9;JAVA://Action.EntityBasedSortingTask&#10;manife&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/META-INF/MANIFEST.MF&#10;manifest&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/META-INF/MANIFEST.MF&#10;show&#9;PSI&#9;JAVA://Action.ShowOnlyTask&#10;mam&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/META-INF/MANIFEST.MF&#10;myco&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/src/main/java/App/MyControlPanel.java&#10;edge&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/src/main/java/Action/ImportEdgesAction.java&#10;mani&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/META-INF/MANIFEST.MF&#10;pom&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/pom.xml&#10;tableset&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/src/main/java/Base/TableSetListener.java&#10;;&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../KafkaInterface" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Final_Project/Project_Files/OPMXMLParser" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.33333334" />
@@ -490,11 +438,15 @@
       <workItem from="1540800772111" duration="4028000" />
       <workItem from="1540843843921" duration="1299000" />
       <workItem from="1540920037373" duration="5763000" />
+      <workItem from="1541315591051" duration="17000" />
+      <workItem from="1542909997493" duration="4452000" />
+      <workItem from="1542996796597" duration="2903000" />
+      <workItem from="1543052760276" duration="12844000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="232738000" />
+    <option name="totallyTimeSpent" value="252954000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -696,18 +648,175 @@
           <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="29" />
+      <option name="time" value="32" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Base/CompareGraphsCore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4185">
+          <caret line="279" column="53" lean-forward="true" selection-start-line="279" selection-start-column="53" selection-end-line="279" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1998#2680#0" />
+            <element signature="e#2686#3386#0" />
+            <element signature="e#3392#4094#0" />
+            <element signature="e#4100#4801#0" />
+            <element signature="e#43037#43038#0" expanded="true" />
+            <element signature="e#43076#43077#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Util/BackwardDependency.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="77" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Action/ImportEdgesRightClickAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="59" column="40" selection-start-line="59" selection-start-column="40" selection-end-line="59" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/App/MyControlPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16545">
+          <caret line="1151" column="60" selection-start-line="1151" selection-start-column="60" selection-end-line="1151" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Base/EdgesAddedListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Util/BackwardDependencyVol2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1965">
+          <caret line="131" column="4" selection-start-line="131" selection-start-column="4" selection-end-line="131" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Util/BackwardDependency.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="77" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Action/ImportEdgesRightClickAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="59" column="40" selection-start-line="59" selection-start-column="40" selection-end-line="59" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/App/MyControlPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17265">
+          <caret line="1151" column="60" selection-start-line="1151" selection-start-column="60" selection-end-line="1151" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Base/EdgesAddedListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Util/BackwardDependencyVol2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1965">
+          <caret line="131" column="4" selection-start-line="131" selection-start-column="4" selection-end-line="131" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Util/BackwardDependency.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="77" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Action/ImportEdgesRightClickAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="59" column="40" selection-start-line="59" selection-start-column="40" selection-end-line="59" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/App/MyControlPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17265">
+          <caret line="1151" column="60" selection-start-line="1151" selection-start-column="60" selection-end-line="1151" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Base/EdgesAddedListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Util/BackwardDependencyVol2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2820">
           <caret line="192" column="36" lean-forward="true" selection-start-line="192" selection-start-column="36" selection-end-line="192" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4541#4542#0" expanded="true" />
-            <element signature="e#4611#4612#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -732,8 +841,6 @@
           <caret line="92" column="85" selection-start-line="92" selection-start-column="85" selection-end-line="92" selection-end-column="85" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4541#4542#0" expanded="true" />
-            <element signature="e#4611#4612#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -758,8 +865,6 @@
           <caret line="179" column="18" selection-start-line="179" selection-start-column="8" selection-end-line="179" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4541#4542#0" expanded="true" />
-            <element signature="e#4611#4612#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -815,8 +920,6 @@
           <caret line="113" selection-start-line="113" selection-end-line="113" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4541#4542#0" expanded="true" />
-            <element signature="e#4611#4612#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -896,46 +999,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Util/BackwardDependency.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
+        <state relative-caret-position="705">
           <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="77" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#12330#12331#0" expanded="true" />
-            <element signature="e#12364#12365#0" expanded="true" />
-            <element signature="e#12429#12430#0" expanded="true" />
-            <element signature="e#12475#12476#0" expanded="true" />
-            <element signature="e#12527#12528#0" expanded="true" />
-            <element signature="e#12564#12565#0" expanded="true" />
-            <element signature="e#12635#12636#0" expanded="true" />
-            <element signature="e#12687#12688#0" expanded="true" />
-            <element signature="e#12734#12735#0" expanded="true" />
-            <element signature="e#12766#12767#0" expanded="true" />
-            <element signature="e#12827#12828#0" expanded="true" />
-            <element signature="e#12869#12870#0" expanded="true" />
-            <element signature="e#12919#12920#0" expanded="true" />
-            <element signature="e#12954#12955#0" expanded="true" />
-            <element signature="e#13021#13022#0" expanded="true" />
-            <element signature="e#13069#13070#0" expanded="true" />
-            <element signature="e#13133#13134#0" expanded="true" />
-            <element signature="e#13176#13177#0" expanded="true" />
-            <element signature="e#13391#13392#0" expanded="true" />
-            <element signature="e#13432#13433#0" expanded="true" />
-            <element signature="e#13639#13640#0" expanded="true" />
-            <element signature="e#13674#13675#0" expanded="true" />
-            <element signature="e#13753#13754#0" expanded="true" />
-            <element signature="e#13801#13802#0" expanded="true" />
-            <element signature="e#13861#13862#0" expanded="true" />
-            <element signature="e#13894#13895#0" expanded="true" />
-            <element signature="e#13969#13970#0" expanded="true" />
-            <element signature="e#14013#14014#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Action/ImportEdgesRightClickAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="59" column="40" selection-start-line="59" selection-start-column="40" selection-end-line="59" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -956,13 +1021,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/App/MyControlPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Action/ImportEdgesRightClickAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="1151" column="60" selection-start-line="1151" selection-start-column="60" selection-end-line="1151" selection-end-column="60" />
+        <state relative-caret-position="615">
+          <caret line="59" column="40" selection-start-line="59" selection-start-column="40" selection-end-line="59" selection-end-column="40" />
           <folding>
-            <element signature="e#71897#71898#0" expanded="true" />
-            <element signature="e#71938#71939#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Util/BackwardDependencyVol2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -970,18 +1044,36 @@
     <entry file="file://$PROJECT_DIR$/META-INF/MANIFEST.MF">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Util/BackwardDependencyVol2.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Action/DrawComparedGraphs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="131" column="4" selection-start-line="131" selection-start-column="4" selection-end-line="131" selection-end-column="4" />
+        <state relative-caret-position="342">
+          <caret line="104" column="61" lean-forward="true" selection-start-line="104" selection-start-column="61" selection-end-line="104" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/App/MyControlPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="1027" column="44" lean-forward="true" selection-start-line="1027" selection-start-column="44" selection-end-line="1027" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Base/CompareGraphsCore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-183">
+          <caret line="196" column="29" lean-forward="true" selection-start-line="196" selection-start-column="29" selection-end-line="196" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4541#4542#0" expanded="true" />
-            <element signature="e#4611#4612#0" expanded="true" />
+            <element signature="e#1998#2680#0" />
+            <element signature="e#2686#3386#0" />
+            <element signature="e#3392#4094#0" />
+            <element signature="e#4100#4801#0" />
+            <element signature="e#43037#43038#0" expanded="true" />
+            <element signature="e#43076#43077#0" expanded="true" />
           </folding>
         </state>
       </provider>

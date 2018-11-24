@@ -4,10 +4,7 @@ import App.CytoVisProject;
 import App.MyControlPanel;
 import Action.*;
 
-import java.awt.List;
 import java.io.*;
-import java.lang.reflect.Array;
-import java.security.KeyStore;
 import java.util.*;
 import javax.swing.*;
 
@@ -152,10 +149,10 @@ public class CompareGraphsCore {
     public Integer compareGraphs() {
         Integer result = 1;
 
-        node1Path = "/home/erkan/Desktop/n1.csv";
-        node2Path = "/home/erkan/Desktop/n2.csv";
-        edge1Path = "/home/erkan/Desktop/e1.csv";
-        edge2Path = "/home/erkan/Desktop/e2.csv";
+        node1Path = "/home/erkan/Desktop/1n.csv";
+        node2Path = "/home/erkan/Desktop/2n.csv";
+        edge1Path = "/home/erkan/Desktop/1e.csv";
+        edge2Path = "/home/erkan/Desktop/2e.csv";
 
         firstGraphsEdges  = new JSONArray();
         firstGraphsNodes  = new JSONArray();
@@ -171,7 +168,106 @@ public class CompareGraphsCore {
         return result;
     }
 
-    public void findSimilarNodePairs(){
+    // Finding similar node pairs via greedy approach
+    public void findSimilarNodePairsWithGreedyApproach(){
+        similarNodePairs = new ArrayList();
+
+        // Finding node pair which has biggest attendance value
+        JSONObject peakAttendanceNodePair = (JSONObject) attendanceList.get(0);
+        for(int i=1; i<attendanceList.size(); i++){
+            if(Double.parseDouble(((JSONObject) attendanceList.get(i)).get("attendance").toString()) > Double.parseDouble(peakAttendanceNodePair.get("attendance").toString())){
+                peakAttendanceNodePair = (JSONObject) attendanceList.get(i);
+            }
+        }
+
+        if(Double.parseDouble(peakAttendanceNodePair.get("attendance").toString()) > THRESHOLD){
+            JSONArray L = new JSONArray();
+            JSONArray S = new JSONArray();
+
+            S.add(peakAttendanceNodePair);
+            L.add(peakAttendanceNodePair);
+
+            for(int k=0; k<L.size(); k++){
+                ArrayList<String> incidentNodesToFirst = findIncidentNodes(((JSONObject) L.get(k)).get("firstNode").toString(), true);
+                for (int i=0; i<incidentNodesToFirst.size(); i++){
+                    JSONObject tempPeakAttendance = new JSONObject(){{put("attendance", 0.0);}};
+                    ArrayList<String> incidentNotesToSecond = findIncidentNodes(((JSONObject) L.get(k)).get("secondNode").toString(), false);
+                    for(int j=0; j<incidentNotesToSecond.size(); j++){
+                        if(!checkIfNodeAdded(S, incidentNodesToFirst.get(i), incidentNotesToSecond.get(j))
+                                && Double.parseDouble(((JSONObject) tempPeakAttendance).get("attendance").toString()) < getAttendance(incidentNodesToFirst.get(i), incidentNotesToSecond.get(j))){
+                            tempPeakAttendance = new JSONObject();
+                            tempPeakAttendance.put("attendance", getAttendance(incidentNodesToFirst.get(i), incidentNotesToSecond.get(j)));
+                            tempPeakAttendance.put("firstNode", incidentNodesToFirst.get(i));
+                            tempPeakAttendance.put("secondNode", incidentNotesToSecond.get(j));
+                        }
+                    }
+
+                    if(Double.parseDouble(((JSONObject) tempPeakAttendance).get("attendance").toString()) > THRESHOLD){
+                        L.add(tempPeakAttendance);
+                        S.add(tempPeakAttendance);
+                    }
+                }
+            }
+
+            ArrayList temp;
+            for(int i=0; i<S.size(); i++){
+                temp = new ArrayList();
+                temp.add(((JSONObject) S.get(i)).get("firstNode"));
+                temp.add(((JSONObject) S.get(i)).get("secondNode"));
+                similarNodePairs.add(temp);
+            }
+        }else {
+            return;
+        }
+
+    }
+
+    public Boolean checkIfNodeAdded(JSONArray list, String firstNode, String secondNode){
+        Boolean result = false;
+        for(int i=0; i<list.size(); i++){
+            if(((JSONObject) list.get(i)).get("firstNode").toString().equals(firstNode) && ((JSONObject) list.get(i)).get("secondNode").toString().equals(secondNode)){
+                result = true;
+                break;
+            }
+        }
+
+        return result;
+    }
+
+    // Finding similar node pairs with sorting attendance list
+    public void findSimilarNodePairsWithSorting(){
+        // Sorting attendace list
+        for(int i=0; i<attendanceList.size()-1; i++){
+            JSONObject max      = (JSONObject) attendanceList.get(i);
+            Integer maxIndex    = i;
+            for(int j=i+1; j<attendanceList.size(); j++){
+                if(Double.parseDouble(((JSONObject) attendanceList.get(j)).get("attendance").toString()) > Double.parseDouble(max.get("attendance").toString())){
+                    maxIndex = j;
+                    max = (JSONObject) attendanceList.get(j);
+                }
+            }
+
+            JSONObject temp = (JSONObject) attendanceList.get(i);
+            attendanceList.set(i, max);
+            attendanceList.set(maxIndex, temp);
+        }
+
+        // Getting similar node pairs that attendace value's is bigger than threshold
+        similarNodePairs = new JSONArray();
+        for(int i=0; i<attendanceList.size(); i++){
+            if(Double.parseDouble(((JSONObject) attendanceList.get(i)).get("attendance").toString()) > THRESHOLD){
+                ArrayList tempArrayList = new ArrayList();
+                tempArrayList.add(((JSONObject)attendanceList.get(i)).get("firstNode").toString());
+                tempArrayList.add(((JSONObject)attendanceList.get(i)).get("secondNode").toString());
+                similarNodePairs.add(tempArrayList);
+            }else {
+                break;
+            }
+        }
+
+    }
+
+    public void findSimilarNodePairsWithBruteForce(){
         Integer i;
         Integer j;
 
@@ -190,14 +286,29 @@ public class CompareGraphsCore {
             }
         }else if(algorithm == 1){
             for(i=0; i<attendanceList.size(); i++){
-                if((Boolean) ((JSONObject)((JSONArray)attendanceList.get(i)).get(0)).get("isSimilar")){
+                if((Boolean) ((JSONObject) attendanceList.get(i)).get("isSimilar")){
                     ArrayList tempArrayList = new ArrayList();
-                    tempArrayList.add(((JSONObject)((JSONArray)attendanceList.get(i)).get(0)).get("firstNode").toString());
-                    tempArrayList.add(((JSONObject)((JSONArray)attendanceList.get(i)).get(0)).get("secondNode").toString());
+                    tempArrayList.add(((JSONObject) attendanceList.get(i)).get("firstNode").toString());
+                    tempArrayList.add(((JSONObject) attendanceList.get(i)).get("secondNode").toString());
                     similarNodePairs.add(tempArrayList);
                 }
             }
         }
+    }
+
+    public void compareGraphsChenVersion(){
+        readGraphs();
+
+        ArrayList<String> nodePropertyList = getPropertyList(false);
+        ArrayList<String> edgePropertyList = getPropertyList(true);
+        attendanceList = new JSONArray();
+
+        Double thresholdCoefficient = determineThreshold(nodePropertyList.size(), edgePropertyList.size());
+        System.out.println("First graph: " + firstGraphsNodes.toString() + " - " + firstGraphsEdges.toString());
+        System.out.println("Second graph: " + secondGraphsNodes.toString() + " - " + secondGraphsEdges.toString());
+
+
+
     }
 
     public void createAttendanceList(){
@@ -229,7 +340,6 @@ public class CompareGraphsCore {
                 Boolean isFirstForBigger;
                 Boolean isFirstForLower;
 
-                JSONArray nodePairArray = new JSONArray();
                 JSONObject nodepair = new JSONObject();
                 nodepair.put("firstNode", ((JSONObject)firstGraphsNodes.get(i)).get("nodeID").toString());
                 nodepair.put("secondNode", ((JSONObject)secondGraphsNodes.get(j)).get("nodeID").toString());
@@ -257,10 +367,7 @@ public class CompareGraphsCore {
                     node1 = ((JSONObject)secondGraphsNodes.get(j)).get("nodeID").toString();
                 }
 
-                System.out.println("Current nodes:" + ((JSONObject)firstGraphsNodes.get(i)).get("nodeID").toString() +
-                    "-" + ((JSONObject)secondGraphsNodes.get(j)).get("nodeID").toString());
                 JSONArray connectivityArray = new JSONArray();
-
                 for(node1index=0; node1index<s1; node1index++){
                     adjacentOfFirstNode = incidentListForSmallerDegree.get(node1index);
 
@@ -271,7 +378,6 @@ public class CompareGraphsCore {
                         edgepair.put("adjacent1", adjacentOfFirstNode);
                         edgepair.put("adjacent2", adjacentOfSecondNode);
 
-                        System.out.println("Adjacent: " + adjacentOfFirstNode + "-" + adjacentOfSecondNode);
                         if(algorithm == 2){
                             for(String property : edgePropertyList){
                                 if(((JSONObject)firstGraphsEdges.get(0)).containsValue(property) && ((JSONObject)secondGraphsEdges.get(0)).containsValue(property)){
@@ -473,24 +579,7 @@ public class CompareGraphsCore {
                     }
                 }
 
-                nodePairArray.add(nodepair);
-                attendanceList.add(nodePairArray);
-            }
-        }
-
-        if(algorithm == 2){
-            for(i=0; i<attendanceList.size(); i++){
-                for(j=0; j<((JSONArray) attendanceList.get(i)).size(); j++){
-                    System.out.println(((JSONObject)((JSONArray) attendanceList.get(i)).get(j)).get("firstNode") + "-" + ((JSONObject)((JSONArray) attendanceList.get(i)).get(j)).get("secondNode")
-                            + ((JSONObject)((JSONArray) attendanceList.get(i)).get(j)).get("attendance"));
-                }
-            }
-        }else if(algorithm == 1){
-            for(i=0; i<attendanceList.size(); i++){
-                for(j=0; j<((JSONArray) attendanceList.get(i)).size(); j++){
-                    System.out.println(((JSONObject)((JSONArray) attendanceList.get(i)).get(j)).get("firstNode") + "-" + ((JSONObject)((JSONArray) attendanceList.get(i)).get(j)).get("secondNode")
-                            + ((JSONObject)((JSONArray) attendanceList.get(i)).get(j)).get("isSimilar"));
-                }
+                attendanceList.add(nodepair);
             }
         }
     }
@@ -553,11 +642,10 @@ public class CompareGraphsCore {
         Integer i;
 
         for(i=0; i<attendanceList.size(); i++){
-            JSONArray tmp = (JSONArray) attendanceList.get(i);
-            JSONObject values = (JSONObject) tmp.get(0);
+            JSONObject nodePair = (JSONObject) attendanceList.get(i);
 
-            if(values.get("firstNode").toString().equals(x) && values.get("secondNode").toString().equals(y)){
-                result = (Double) values.get("attendance");
+            if(nodePair.get("firstNode").toString().equals(x) && nodePair.get("secondNode").toString().equals(y)){
+                result = (Double) nodePair.get("attendance");
                 break;
             }
         }
