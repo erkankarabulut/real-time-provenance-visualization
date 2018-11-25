@@ -1,8 +1,7 @@
 package Action;
 
 import App.CytoVisProject;
-import Util.BackwardDependency;
-import Util.BackwardDependencyVol2;
+import Util.EnhancedVersionOfBDM;
 import com.opencsv.CSVReader;
 import org.cytoscape.app.swing.CySwingAppAdapter;
 import org.cytoscape.task.read.LoadNetworkFileTaskFactory;
@@ -24,14 +23,14 @@ public class ImportEdgesRightClickAction implements MouseListener {
     // Variables
     private CySwingAppAdapter adapter;
     private CytoVisProject cytoVisProject;
-    private BackwardDependencyVol2 backwardDependencyVol2;
+    private EnhancedVersionOfBDM enhancedVersionOfBDM;
     private File file;
 
-    public ImportEdgesRightClickAction(CytoVisProject cytoVisProject, BackwardDependencyVol2 backwardDependencyVol2){
+    public ImportEdgesRightClickAction(CytoVisProject cytoVisProject, EnhancedVersionOfBDM enhancedVersionOfBDM){
         // Initializations of Variables
         this.cytoVisProject     = cytoVisProject;
         this.adapter            = cytoVisProject.getAdapter();
-        this.backwardDependencyVol2 = backwardDependencyVol2;
+        this.enhancedVersionOfBDM = enhancedVersionOfBDM;
     }
 
     public void mouseClicked(MouseEvent e) {
@@ -82,7 +81,7 @@ public class ImportEdgesRightClickAction implements MouseListener {
                     long startTime = new Date().getTime();
                     for(Object object : data){
                         temp = (JSONObject) parser.parse(object.toString());
-                        backwardDependencyVol2.updateState(temp.get("source").toString(), temp.get("dest").toString());
+                        enhancedVersionOfBDM.updateState(temp.get("source").toString(), temp.get("dest").toString());
                     }
 
                     System.out.println("[" + new SimpleDateFormat( "yyyy-MM-dd HH:mm:ss" ).format(new Date()) + "] Total time to run BDM: "

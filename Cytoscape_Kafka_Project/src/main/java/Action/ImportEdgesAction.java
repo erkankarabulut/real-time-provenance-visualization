@@ -1,7 +1,7 @@
 package Action;
 
 import App.CytoVisProject;
-import Util.BackwardDependencyVol2;
+import Util.EnhancedVersionOfBDM;
 import com.opencsv.CSVReader;
 import org.cytoscape.app.swing.CySwingAppAdapter;
 import org.cytoscape.application.swing.AbstractCyAction;
@@ -23,7 +23,7 @@ public class ImportEdgesAction extends AbstractCyAction {
     // Variables
     private CySwingAppAdapter adapter;
     private CytoVisProject cytoVisProject;
-    private BackwardDependencyVol2 backwardDependencyVol2;
+    private EnhancedVersionOfBDM enhancedVersionOfBDM;
     private File file;
     private String path;
 
@@ -34,7 +34,7 @@ public class ImportEdgesAction extends AbstractCyAction {
         this.adapter                = cytoVisProject.getAdapter();
         this.path                   = path;
         this.file                   = new File(path);
-        this.backwardDependencyVol2 = new BackwardDependencyVol2();
+        this.enhancedVersionOfBDM = new EnhancedVersionOfBDM();
     }
 
     public void actionPerformed(ActionEvent e){
@@ -80,13 +80,13 @@ public class ImportEdgesAction extends AbstractCyAction {
 
                     for(Object object : data){
                         JSONObject line = (JSONObject) object;
-                        backwardDependencyVol2.updateState(line.get("source").toString(), line.get("dest").toString());
+                        enhancedVersionOfBDM.updateState(line.get("source").toString(), line.get("dest").toString());
                     }
 
                     long startTime = new Date().getTime();
 
                     for(CyRow row : adapter.getCyApplicationManager().getCurrentNetwork().getDefaultEdgeTable().getAllRows()){
-                        backwardDependencyVol2.updateState(row.get("Source", String.class), row.get("Destination", String.class));
+                        enhancedVersionOfBDM.updateState(row.get("Source", String.class), row.get("Destination", String.class));
                     }
 
                     System.out.println("[" + new SimpleDateFormat( "yyyy-MM-dd HH:mm:ss" ).format(new Date()) + "] Total time to run BDM: "

@@ -29,7 +29,7 @@ public class CytoVisProject extends AbstractCySwingApp{
         ControlPanelAction controlPanelAction = new ControlPanelAction(adapter.getCySwingApplication(),myControlPanel,adapter);
         adapter.getCyServiceRegistrar().registerService(controlPanelAction, CyAction.class,new Properties());
         // Creating and registering a new RowsSetListener
-        this.tableSetListener = new TableSetListener(this, myControlPanel.getBackwardDependencyVol2());
+        this.tableSetListener = new TableSetListener(this, myControlPanel.getEnhancedVersionOfBDM());
         adapter.getCyServiceRegistrar().registerService(tableSetListener, RowsSetListener.class,new Properties());
         // Creating and registering a new NetworkDestroyedListener
         NetworkDeletedListener networkDeletedListener = new NetworkDeletedListener(this);

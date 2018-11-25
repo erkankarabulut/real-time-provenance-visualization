@@ -6,20 +6,25 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Set;
 
-public class BackwardDependencyVol2 {
+public class EnhancedVersionOfBDM {
 
-    private HashMap<String, ArrayList<String>> stateCurrent;
-    private HashMap<String, ArrayList<String>> statePurge;
-    private HashMap<String, String> varIdToNodeIdCurrent;
-    private HashMap<String, String> varIdToNodeIdPurge;
-    private Integer uniqueNodeId;
+    private HashMap<String, ArrayList<String>>  stateCurrent;
+    private HashMap<String, ArrayList<String>>  statePurge;
+    private HashMap<String, String>             varIdToNodeIdCurrent;
+    private HashMap<String, String>             varIdToNodeIdPurge;
+    private Integer                             uniqueNodeId;
+    private Boolean                             doesFilterApplied;
+    private ArrayList<String>                   filterNode;
+    private ArrayList<String>                   selectedNodeIdList;
 
-    public BackwardDependencyVol2(){
+    public EnhancedVersionOfBDM(){
         stateCurrent            = new HashMap<>();
         statePurge              = new HashMap<>();
         varIdToNodeIdCurrent    = new HashMap<>();
         varIdToNodeIdPurge      = new HashMap<>();
         uniqueNodeId            = new Integer(0);
+        doesFilterApplied       = false;
+        filterNode              = new ArrayList<>();
     }
 
     public void printMatrix(HashMap<String, ArrayList<String>> matrix){
@@ -159,5 +164,29 @@ public class BackwardDependencyVol2 {
 
     public void setStatePurge(HashMap<String, ArrayList<String>> statePurge) {
         this.statePurge = statePurge;
+    }
+
+    public Boolean getDoesFilterApplied() {
+        return doesFilterApplied;
+    }
+
+    public void setDoesFilterApplied(Boolean doesFilterApplied) {
+        this.doesFilterApplied = doesFilterApplied;
+    }
+
+    public ArrayList<String> getFilterNode() {
+        return filterNode;
+    }
+
+    public void setFilterNode(ArrayList<String> filterNode) {
+        this.filterNode = filterNode;
+    }
+
+    public ArrayList<String> getSelectedNodeIdList() {
+        return selectedNodeIdList;
+    }
+
+    public void setSelectedNodeIdList(ArrayList<String> selectedNodeIdList) {
+        this.selectedNodeIdList = selectedNodeIdList;
     }
 }

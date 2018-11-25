@@ -1,25 +1,17 @@
 package Util;
 
 import App.MyControlPanel;
-import jdk.nashorn.internal.scripts.JO;
 import org.cytoscape.app.swing.CySwingAppAdapter;
 import org.cytoscape.model.*;
-import org.cytoscape.task.write.ExportNetworkImageTaskFactory;
-import org.cytoscape.task.write.ExportNetworkViewTaskFactory;
-import org.cytoscape.task.write.ExportTableTaskFactory;
 import org.cytoscape.view.model.CyNetworkView;
 import org.cytoscape.view.model.CyNetworkViewFactory;
 import org.cytoscape.view.model.CyNetworkViewManager;
-import org.cytoscape.work.TaskIterator;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import redis.clients.jedis.JedisPubSub;
 
-import javax.swing.*;
-import java.io.File;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 public class Subscriber extends JedisPubSub {
@@ -265,6 +257,21 @@ public class Subscriber extends JedisPubSub {
         networkViewOrganizer.reOrganizeNetwork();
         panel.getInstance().getAdapter().getCyApplicationManager().getCurrentNetworkView().updateView();
 
+        // If there is a backward dependency applied than show only related nodes
+        if(panel.getEnhancedVersionOfBDM().getDoesFilterApplied()){
+            ArrayList<String> nodesToBeShownOnly = new ArrayList<>();
+            // Get nodes to be shown only
+            nodesToBeShownOnly.addAll(panel.getEnhancedVersionOfBDM().getSelectedNodeIdList());
+            for(String nodeId : panel.getEnhancedVersionOfBDM().getSelectedNodeIdList()){
+                nodesToBeShownOnly.addAll(panel.getEnhancedVersionOfBDM().getBackwardProvenance(nodeId, panel.getEnhancedVersionOfBDM().getStateCurrent(), new ArrayList<>()));
+            }
+
+            // change vis style
+            panel.getNetworkViewOrganizer().showOnly(nodesToBeShownOnly,
+                    new FilterUtil(adapter.getCyApplicationManager().getCurrentNetwork(), adapter.getCyApplicationManager().getCurrentTable()));
+        }
+
+        adapter.getCyApplicationManager().getCurrentNetworkView().updateView();
         /*
 
         if(type.contains("node")){
