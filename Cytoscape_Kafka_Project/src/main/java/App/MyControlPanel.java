@@ -92,6 +92,7 @@ public class MyControlPanel extends JPanel implements CytoPanelComponent{
 
     private JCheckBox sliderCheckBox;
     private JCheckBox compareAllProperties;
+    private JCheckBox ignoreDifferentNodeTypes;
     private JRadioButton active;
     private JRadioButton inactive;
     private JRadioButton vsTemplate1;
@@ -133,6 +134,7 @@ public class MyControlPanel extends JPanel implements CytoPanelComponent{
     private JSpinner edgeWeight;
     private JSpinner neighbourNodeWeight;
     private JSpinner threshold;
+    private JSpinner minThreshold;
 
     private JLabel statusLabel;
     private JLabel appName;
@@ -157,6 +159,7 @@ public class MyControlPanel extends JPanel implements CytoPanelComponent{
     private JLabel edgeWeightLabel;
     private JLabel neighbourNodeWeightLabel;
     private JLabel thresholdLabel;
+    private JLabel minThresholdLabel;
 
     private Subscriber subscriber;
 
@@ -182,10 +185,11 @@ public class MyControlPanel extends JPanel implements CytoPanelComponent{
         edgeWeight.setEnabled(false);
         neighbourNodeWeight.setEnabled(false);
         threshold.setEnabled(false);
+        minThreshold.setEnabled(false);
         this.setAutoscrolls(true);
         compareGraphsButton.setEnabled(false);
         this.compareGraphsCore = new CompareGraphsCore(cytoVisProject);
-        compareGraphsCore.changeFile(1, 0.0, 0.0, 0.0,0.0);
+        compareGraphsCore.changeFile(1, 0.0, 0.0, 0.0,0.0, 0.0);
         networkViewOrganizer = new NetworkViewOrganizer(this);
     }
 
@@ -449,14 +453,17 @@ public class MyControlPanel extends JPanel implements CytoPanelComponent{
         this.showAllNodesEdges              = new JButton("<html>Show All <br/>Nodes and Edges</html>");
 
         this.compareAllProperties           = new JCheckBox("Include all properties to comparison");
+        this.ignoreDifferentNodeTypes       = new JCheckBox("Ignore nodes with different node types");
         this.nodeWeight                     = new JSpinner(new SpinnerNumberModel(0.0, -1000.0, 1000.0, 0.1));
         this.edgeWeight                     = new JSpinner(new SpinnerNumberModel(0.0, -1000.0, 1000.0, 0.1));
         this.neighbourNodeWeight            = new JSpinner(new SpinnerNumberModel(0.0, -1000.0, 1000.0, 0.1));
         this.threshold                      = new JSpinner(new SpinnerNumberModel(0.1, 0.0, 1, 0.1));
+        this.minThreshold                   = new JSpinner(new SpinnerNumberModel(0.1,0.0,1,0.1));
         this.nodeWeightLabel                = new JLabel("Node Weight:");
         this.edgeWeightLabel                = new JLabel("Edge Weight:");
         this.neighbourNodeWeightLabel       = new JLabel("Adjacent Node Weight:");
         this.thresholdLabel                 = new JLabel("Threshold:");
+        this.minThresholdLabel              = new JLabel("Minimum Threshold:");
 
         chooseFirstGraphsNodeButton.setPreferredSize(new Dimension(((Double)(mainPanelWidth * 0.4)).intValue(), 30));
         chooseFirstGraphsEdgeButton.setPreferredSize(new Dimension(((Double)(mainPanelWidth * 0.4)).intValue(), 30));
@@ -464,6 +471,7 @@ public class MyControlPanel extends JPanel implements CytoPanelComponent{
         chooseSecondGraphsEdgeButton.setPreferredSize(new Dimension(((Double)(mainPanelWidth * 0.4)).intValue(), 30));
         importGraphsButton.setPreferredSize(new Dimension(((Double)(mainPanelWidth * 0.39)).intValue(), 30));
         compareAllProperties.setPreferredSize(new Dimension(((Double)(mainPanelWidth * 0.75)).intValue(), 30));
+        ignoreDifferentNodeTypes.setPreferredSize(new Dimension(((Double)(mainPanelWidth * 0.75)).intValue(), 30));
         getBackwardProvenanceButton.setPreferredSize(new Dimension(((Double)(mainPanelWidth * 0.4)).intValue(), 50));
         showAllNodesEdges.setPreferredSize(new Dimension(((Double)(mainPanelWidth * 0.4)).intValue(), 50));
 
@@ -471,10 +479,12 @@ public class MyControlPanel extends JPanel implements CytoPanelComponent{
         edgeWeight.setPreferredSize(new Dimension(((Double)(mainPanelWidth * 0.20)).intValue(), 30));
         neighbourNodeWeight.setPreferredSize(new Dimension(((Double)(mainPanelWidth * 0.20)).intValue(), 30));
         threshold.setPreferredSize(new Dimension(((Double)(mainPanelWidth * 0.20)).intValue(), 30));
+        minThreshold.setPreferredSize(new Dimension(((Double)(mainPanelWidth * 0.20)).intValue(), 30));
         this.nodeWeightLabel.setPreferredSize(new Dimension(((Double)(mainPanelWidth * 0.60)).intValue(), 30));
         this.edgeWeightLabel.setPreferredSize(new Dimension(((Double)(mainPanelWidth * 0.60)).intValue(), 30));
         this.neighbourNodeWeightLabel.setPreferredSize(new Dimension(((Double)(mainPanelWidth * 0.60)).intValue(), 30));
         this.thresholdLabel.setPreferredSize(new Dimension(((Double)(mainPanelWidth * 0.60)).intValue(), 30));
+        this.minThresholdLabel.setPreferredSize(new Dimension(((Double)(mainPanelWidth * 0.60)).intValue(), 30));
 
         this.firstGraphsEdgeLabel = new JLabel("None");
         this.firstGraphsNodeLabel = new JLabel("None");
@@ -620,6 +630,7 @@ public class MyControlPanel extends JPanel implements CytoPanelComponent{
         compareGraphsPanel.add(compareGraphsButton);
 
         compareGraphsPanel.add(compareAllProperties);
+        compareGraphsPanel.add(ignoreDifferentNodeTypes);
         compareGraphsPanel.add(nodeWeightLabel);
         compareGraphsPanel.add(nodeWeight);
         compareGraphsPanel.add(edgeWeightLabel);
@@ -628,6 +639,8 @@ public class MyControlPanel extends JPanel implements CytoPanelComponent{
         compareGraphsPanel.add(neighbourNodeWeight);
         compareGraphsPanel.add(thresholdLabel);
         compareGraphsPanel.add(threshold);
+        compareGraphsPanel.add(minThresholdLabel);
+        compareGraphsPanel.add(minThreshold);
 
         compareGraphsPanel.add(getBackwardProvenanceButton);
         compareGraphsPanel.add(showAllNodesEdges);
@@ -1024,11 +1037,24 @@ public class MyControlPanel extends JPanel implements CytoPanelComponent{
 
         compareGraphsButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent actionEvent) {
+                long startTime = System.currentTimeMillis();
                 compareGraphsCore.createAttendanceList();
-                /*compareGraphsCore.findSimilarNodePairsWithBruteForce();
-                compareGraphsCore.findSimilarNodePairsWithSorting();*/
-                compareGraphsCore.findSimilarNodePairsWithGreedyApproach();
+                compareGraphsCore.findSimilarNodePairsWithSorting();
+                // compareGraphsCore.findSimilarNodePairsWithSorting();
+                // compareGraphsCore.findSimilarNodePairsWithGreedyApproach();
+                System.out.println("Total time to compare graphs: " + (System.currentTimeMillis() - startTime));
                 drawComparedGraphs.changeColors(compareGraphsCore);
+            }
+        });
+
+        this.ignoreDifferentNodeTypes.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                if(ignoreDifferentNodeTypes.isSelected()){
+                    compareGraphsCore.setIgnorDifferentNodeTypes(true);
+                }else {
+                    compareGraphsCore.setIgnorDifferentNodeTypes(false);
+                }
             }
         });
 
@@ -1038,17 +1064,19 @@ public class MyControlPanel extends JPanel implements CytoPanelComponent{
                 if(compareAllProperties.isSelected()){
                     compareGraphsCore.changeFile(2, Double.parseDouble(nodeWeight.getValue().toString()),
                             Double.parseDouble(edgeWeight.getValue().toString()), Double.parseDouble(neighbourNodeWeight.getValue().toString()),
-                            Double.parseDouble(threshold.getValue().toString()));
+                            Double.parseDouble(threshold.getValue().toString()), Double.parseDouble(minThreshold.getValue().toString()));
                     nodeWeight.setEnabled(true);
                     edgeWeight.setEnabled(true);
                     neighbourNodeWeight.setEnabled(true);
                     threshold.setEnabled(true);
+                    minThreshold.setEnabled(true);
                 }else {
-                    compareGraphsCore.changeFile(1, 0.0, 0.0, 0.0,0.0);
+                    compareGraphsCore.changeFile(1, 0.0, 0.0, 0.0,0.0, 0.0);
                     nodeWeight.setEnabled(false);
                     edgeWeight.setEnabled(false);
                     neighbourNodeWeight.setEnabled(false);
                     threshold.setEnabled(false);
+                    minThreshold.setEnabled(false);
                 }
             }
         });
@@ -1058,7 +1086,7 @@ public class MyControlPanel extends JPanel implements CytoPanelComponent{
             public void stateChanged(ChangeEvent changeEvent) {
                 compareGraphsCore.changeFile(2, Double.parseDouble(nodeWeight.getValue().toString()),
                         Double.parseDouble(edgeWeight.getValue().toString()), Double.parseDouble(neighbourNodeWeight.getValue().toString()),
-                        Double.parseDouble(threshold.getValue().toString()));
+                        Double.parseDouble(threshold.getValue().toString()), Double.parseDouble(minThreshold.getValue().toString()));
             }
         });
 
@@ -1067,7 +1095,7 @@ public class MyControlPanel extends JPanel implements CytoPanelComponent{
             public void stateChanged(ChangeEvent changeEvent) {
                 compareGraphsCore.changeFile(2, Double.parseDouble(nodeWeight.getValue().toString()),
                         Double.parseDouble(edgeWeight.getValue().toString()), Double.parseDouble(neighbourNodeWeight.getValue().toString()),
-                        Double.parseDouble(threshold.getValue().toString()));
+                        Double.parseDouble(threshold.getValue().toString()), Double.parseDouble(minThreshold.getValue().toString()));
             }
         });
 
@@ -1076,7 +1104,7 @@ public class MyControlPanel extends JPanel implements CytoPanelComponent{
             public void stateChanged(ChangeEvent changeEvent) {
                 compareGraphsCore.changeFile(2, Double.parseDouble(nodeWeight.getValue().toString()),
                         Double.parseDouble(edgeWeight.getValue().toString()), Double.parseDouble(neighbourNodeWeight.getValue().toString()),
-                        Double.parseDouble(threshold.getValue().toString()));
+                        Double.parseDouble(threshold.getValue().toString()), Double.parseDouble(minThreshold.getValue().toString()));
             }
         });
 
@@ -1085,7 +1113,7 @@ public class MyControlPanel extends JPanel implements CytoPanelComponent{
             public void stateChanged(ChangeEvent changeEvent) {
                 compareGraphsCore.changeFile(2, Double.parseDouble(nodeWeight.getValue().toString()),
                         Double.parseDouble(edgeWeight.getValue().toString()), Double.parseDouble(neighbourNodeWeight.getValue().toString()),
-                        Double.parseDouble(threshold.getValue().toString()));
+                        Double.parseDouble(threshold.getValue().toString()), Double.parseDouble(minThreshold.getValue().toString()));
             }
         });
 

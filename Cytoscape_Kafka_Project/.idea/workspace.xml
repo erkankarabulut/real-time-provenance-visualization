@@ -21,17 +21,33 @@
       <file leaf-file-name="CompareGraphsCore.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Base/CompareGraphsCore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-183">
-              <caret line="196" column="29" lean-forward="true" selection-start-line="196" selection-start-column="29" selection-end-line="196" selection-end-column="29" />
+            <state relative-caret-position="342">
+              <caret line="290" column="132" selection-start-line="290" selection-start-column="132" selection-end-line="290" selection-end-column="132" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1998#2680#0" />
-                <element signature="e#2686#3386#0" />
-                <element signature="e#3392#4094#0" />
-                <element signature="e#4100#4801#0" />
-                <element signature="e#43037#43038#0" expanded="true" />
-                <element signature="e#43076#43077#0" expanded="true" />
+                <element signature="e#4955#5602#0" />
+                <element signature="e#5608#8991#0" />
+                <element signature="e#14276#31437#0" />
+                <element signature="e#31443#51201#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Subscriber.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Util/Subscriber.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="197" column="61" selection-start-line="197" selection-start-column="61" selection-end-line="197" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyControlPanel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/App/MyControlPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="1038" column="57" selection-start-line="1038" selection-start-column="57" selection-end-line="1038" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -40,25 +56,7 @@
         <entry file="file://$PROJECT_DIR$/META-INF/MANIFEST.MF">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyControlPanel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/App/MyControlPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="548">
-              <caret line="1027" column="44" lean-forward="true" selection-start-line="1027" selection-start-column="44" selection-end-line="1027" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DrawComparedGraphs.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Action/DrawComparedGraphs.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="104" column="61" lean-forward="true" selection-start-line="104" selection-start-column="61" selection-end-line="104" selection-end-column="61" />
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -74,36 +72,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>selected nodes:</find>
-      <find>getBackwardProvenance</find>
-      <find>getbackwardprovenance</find>
-      <find>getbackward</find>
-      <find>d</find>
-      <find>dca</find>
-      <find>direct</find>
-      <find>readgra</find>
-      <find>comparegra</find>
-      <find>read</find>
-      <find>readf</find>
-      <find>node1path</find>
-      <find>node1Path</find>
-      <find>readg</find>
-      <find>chen</find>
-      <find>importgraphsbutt</find>
-      <find>comparegraphs</find>
-      <find>nodePropertyWeight</find>
-      <find>isFirstForBigger</find>
-      <find>comparegraphschen</find>
-      <find>changeFile</find>
       <find>changefi</find>
       <find>compareGraphsButton</find>
       <find>algorithm</find>
       <find>nodepair</find>
       <find>nodePairArray</find>
       <find>getatt</find>
-      <find>compareAllProperties</find>
       <find>system.out.print</find>
       <find>atte</find>
+      <find>getbackwardprovenance</find>
+      <find>getbackward</find>
+      <find>nodepair.put(</find>
+      <find>edgeType</find>
+      <find>1n</find>
+      <find>total</find>
+      <find>threshold</find>
+      <find>createatt</find>
+      <find />
+      <find>compareAllProperties</find>
+      <find>threshold.setEnabled</find>
+      <find>minThreshold.setEnabled</find>
+      <find>comparebut</find>
+      <find>comparegraphsbutton.add</find>
+      <find>determine</find>
+      <find>connectivityArray</find>
+      <find>resultlist:</find>
+      <find>Process_1064870</find>
+      <find>brutefore</find>
+      <find>sortactivit</find>
+      <find>incident</find>
+      <find>interaction</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -118,7 +116,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/Action/ImportVisualStyleAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/Base/ImportVisualStyleTaskFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/Action/ShowOnlyAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/Base/SliderVisualization.java" />
@@ -142,13 +139,11 @@
         <option value="$PROJECT_DIR$/src/main/java/Action/Consumer.java" />
         <option value="$PROJECT_DIR$/src/main/java/Action/Producer.java" />
         <option value="$PROJECT_DIR$/src/main/java/Action/ChangeVisualStyleTemplate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Util/NetworkViewOrganizer.java" />
         <option value="$PROJECT_DIR$/src/main/java/Base/NodeAddedListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/Action/ImportNodesAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/Base/ExtractEdgesNodesTaskFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/BackwardDependency.java" />
         <option value="$PROJECT_DIR$/src/main/java/Base/EdgeAddedListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Util/Subscriber.java" />
         <option value="$PROJECT_DIR$/src/main/java/Action/EntityBasedSortingTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/Base/DataImportListener.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
@@ -158,15 +153,18 @@
         <option value="$PROJECT_DIR$/src/main/java/Base/TableSetListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/Action/Deneme.java" />
         <option value="$PROJECT_DIR$/src/main/java/Base/ProvoImportCore.java" />
-        <option value="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
         <option value="$PROJECT_DIR$/src/main/java/Action/ImportEdgesAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/Action/ExtractEdgesNodesTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/Util/FilterUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/Util/BackwardDependency.java" />
         <option value="$PROJECT_DIR$/src/main/java/Action/ImportEdgesRightClickAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Base/EdgesAddedListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Util/BackwardDependencyVol2.java" />
         <option value="$PROJECT_DIR$/src/main/java/Action/DrawComparedGraphs.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Util/BackwardDependencyVol2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Util/NetworkViewOrganizer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Util/EnhancedVersionOfBDM.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Base/EdgesAddedListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Util/Subscriber.java" />
+        <option value="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
         <option value="$PROJECT_DIR$/src/main/java/App/MyControlPanel.java" />
         <option value="$PROJECT_DIR$/src/main/java/Base/CompareGraphsCore.java" />
       </list>
@@ -203,6 +201,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -234,6 +234,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Action" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Cytoscape_Kafka_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cytoscape_Kafka_Project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="Base" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -244,27 +252,18 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="Util" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Cytoscape_Kafka_Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Cytoscape_Kafka_Project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="manif&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/META-INF/MANIFEST.MF&#10;manifes&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/META-INF/MANIFEST.MF&#10;man&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/META-INF/MANIFEST.MF&#10;edgeadded&#9;PSI&#9;JAVA://Base.EdgesAddedListener&#10;mycon&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/src/main/java/App/MyControlPanel.java&#10;imported&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/src/main/java/Action/ImportEdgesRightClickAction.java&#10;entity&#9;PSI&#9;JAVA://Action.EntityBasedSortingTask&#10;manife&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/META-INF/MANIFEST.MF&#10;manifest&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/META-INF/MANIFEST.MF&#10;show&#9;PSI&#9;JAVA://Action.ShowOnlyTask&#10;mam&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/META-INF/MANIFEST.MF&#10;myco&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/src/main/java/App/MyControlPanel.java&#10;edge&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/src/main/java/Action/ImportEdgesAction.java&#10;mani&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/META-INF/MANIFEST.MF&#10;pom&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/pom.xml&#10;tableset&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/src/main/java/Base/TableSetListener.java&#10;;&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="mani&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/META-INF/MANIFEST.MF&#10;manifest&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/META-INF/MANIFEST.MF&#10;manife&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/META-INF/MANIFEST.MF&#10;man&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/META-INF/MANIFEST.MF&#10;my&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/src/main/java/App/MyControlPanel.java&#10;manif&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/META-INF/MANIFEST.MF&#10;manifes&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/META-INF/MANIFEST.MF&#10;edgeadded&#9;PSI&#9;JAVA://Base.EdgesAddedListener&#10;mycon&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/src/main/java/App/MyControlPanel.java&#10;imported&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/src/main/java/Action/ImportEdgesRightClickAction.java&#10;entity&#9;PSI&#9;JAVA://Action.EntityBasedSortingTask&#10;show&#9;PSI&#9;JAVA://Action.ShowOnlyTask&#10;mam&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/META-INF/MANIFEST.MF&#10;myco&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/src/main/java/App/MyControlPanel.java&#10;edge&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/src/main/java/Action/ImportEdgesAction.java&#10;pom&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/pom.xml&#10;tableset&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/src/main/java/Base/TableSetListener.java&#10;;&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Final_Project/Project_Files/OPMXMLParser" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../KafkaInterface" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.33333334" />
@@ -441,12 +440,19 @@
       <workItem from="1541315591051" duration="17000" />
       <workItem from="1542909997493" duration="4452000" />
       <workItem from="1542996796597" duration="2903000" />
-      <workItem from="1543052760276" duration="12844000" />
+      <workItem from="1543052760276" duration="13517000" />
+      <workItem from="1543129983019" duration="2634000" />
+      <workItem from="1543175018037" duration="5418000" />
+      <workItem from="1543213153904" duration="2344000" />
+      <workItem from="1543247542136" duration="14800000" />
+      <workItem from="1543338745015" duration="7465000" />
+      <workItem from="1543349165839" duration="1348000" />
+      <workItem from="1543429089253" duration="3588000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="252954000" />
+    <option name="totallyTimeSpent" value="291224000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -468,7 +474,6 @@
       <window_info id="Designer" order="2" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17916891" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32894737" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -485,6 +490,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24986508" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32894737" />
     </layout>
     <layout-to-restore>
       <window_info id="Designer" order="2" />
@@ -648,43 +654,10 @@
           <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="32" />
+      <option name="time" value="33" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/Base/CompareGraphsCore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4185">
-          <caret line="279" column="53" lean-forward="true" selection-start-line="279" selection-start-column="53" selection-end-line="279" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1998#2680#0" />
-            <element signature="e#2686#3386#0" />
-            <element signature="e#3392#4094#0" />
-            <element signature="e#4100#4801#0" />
-            <element signature="e#43037#43038#0" expanded="true" />
-            <element signature="e#43076#43077#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/META-INF/MANIFEST.MF">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Util/BackwardDependency.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="77" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Action/ImportEdgesRightClickAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
@@ -709,13 +682,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Util/BackwardDependencyVol2.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Util/EnhancedVersionOfBDM.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1965">
           <caret line="131" column="4" selection-start-line="131" selection-start-column="4" selection-end-line="131" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -730,9 +700,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="960">
           <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="77" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -760,13 +727,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Util/BackwardDependencyVol2.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Util/EnhancedVersionOfBDM.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1965">
           <caret line="131" column="4" selection-start-line="131" selection-start-column="4" selection-end-line="131" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -781,9 +745,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="960">
           <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="77" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -811,13 +772,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Util/BackwardDependencyVol2.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Util/EnhancedVersionOfBDM.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2820">
           <caret line="192" column="36" lean-forward="true" selection-start-line="192" selection-start-column="36" selection-end-line="192" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -835,13 +793,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Util/BackwardDependencyVol2.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Util/EnhancedVersionOfBDM.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1380">
           <caret line="92" column="85" selection-start-line="92" selection-start-column="85" selection-end-line="92" selection-end-column="85" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -859,13 +814,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Util/BackwardDependencyVol2.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Util/EnhancedVersionOfBDM.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2430">
           <caret line="179" column="18" selection-start-line="179" selection-start-column="8" selection-end-line="179" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -914,13 +866,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Util/BackwardDependencyVol2.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Util/EnhancedVersionOfBDM.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1440">
           <caret line="113" selection-start-line="113" selection-end-line="113" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -976,48 +925,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Util/FilterUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1890">
-          <caret line="130" column="22" selection-start-line="130" selection-start-column="22" selection-end-line="130" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Action/EntityBasedSortingTask.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1785">
           <caret line="131" column="74" selection-start-line="131" selection-start-column="74" selection-end-line="131" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Util/Subscriber.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2280">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Util/BackwardDependency.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="77" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Base/TableSetListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Base/EdgesAddedListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -1031,49 +942,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Util/BackwardDependencyVol2.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Util/FilterUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="2205">
+          <caret line="151" column="16" selection-start-line="151" selection-start-column="16" selection-end-line="151" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Util/EnhancedVersionOfBDM.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2348">
+          <caret line="184" column="54" selection-start-line="184" selection-start-column="54" selection-end-line="184" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Action/DrawComparedGraphs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="121" column="93" selection-start-line="121" selection-start-column="93" selection-end-line="121" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Action/SortActivitiesByTimeTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="39" column="52" lean-forward="true" selection-start-line="39" selection-start-column="52" selection-end-line="39" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Base/SortActivitesByTimeTaskFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Base/EdgesAddedListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Base/TableSetListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Util/BackwardDependency.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1995">
+          <caret line="150" column="51" selection-start-line="150" selection-start-column="51" selection-end-line="150" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Util/NetworkViewOrganizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="678">
+          <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Util/Subscriber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="197" column="61" selection-start-line="197" selection-start-column="61" selection-end-line="197" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/App/MyControlPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="1038" column="57" selection-start-line="1038" selection-start-column="57" selection-end-line="1038" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/META-INF/MANIFEST.MF">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Action/DrawComparedGraphs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="104" column="61" lean-forward="true" selection-start-line="104" selection-start-column="61" selection-end-line="104" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/App/MyControlPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="1027" column="44" lean-forward="true" selection-start-line="1027" selection-start-column="44" selection-end-line="1027" selection-end-column="44" />
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Base/CompareGraphsCore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-183">
-          <caret line="196" column="29" lean-forward="true" selection-start-line="196" selection-start-column="29" selection-end-line="196" selection-end-column="29" />
+        <state relative-caret-position="342">
+          <caret line="290" column="132" selection-start-line="290" selection-start-column="132" selection-end-line="290" selection-end-column="132" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1998#2680#0" />
-            <element signature="e#2686#3386#0" />
-            <element signature="e#3392#4094#0" />
-            <element signature="e#4100#4801#0" />
-            <element signature="e#43037#43038#0" expanded="true" />
-            <element signature="e#43076#43077#0" expanded="true" />
+            <element signature="e#4955#5602#0" />
+            <element signature="e#5608#8991#0" />
+            <element signature="e#14276#31437#0" />
+            <element signature="e#31443#51201#0" />
           </folding>
         </state>
       </provider>
