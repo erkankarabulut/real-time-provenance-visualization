@@ -7,16 +7,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8411cd67-6ad2-4e42-bf01-69c1f8c7faa8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Action/KMeansClustering.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Util/MathUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_fommil_jniloader_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_fommil_netlib_core_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_fommil_netlib_native_ref_java_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_fommil_netlib_native_system_java_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_fommil_netlib_netlib_native_ref_linux_armhf_natives_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_fommil_netlib_netlib_native_ref_linux_i686_natives_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_fommil_netlib_netlib_native_ref_linux_x86_64_natives_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_fommil_netlib_netlib_native_ref_osx_x86_64_natives_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_fommil_netlib_netlib_native_ref_win_i686_natives_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_fommil_netlib_netlib_native_ref_win_x86_64_natives_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_fommil_netlib_netlib_native_system_linux_armhf_natives_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_fommil_netlib_netlib_native_system_linux_i686_natives_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_fommil_netlib_netlib_native_system_linux_x86_64_natives_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_fommil_netlib_netlib_native_system_osx_x86_64_natives_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_fommil_netlib_netlib_native_system_win_i686_natives_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_fommil_netlib_netlib_native_system_win_x86_64_natives_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_matrix_toolkits_java_mtj_1_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_netlib_java_netlib_java_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_f2j_arpack_combined_all_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__nz_ac_waikato_cms_weka_thirdparty_bounce_0_18.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__nz_ac_waikato_cms_weka_thirdparty_java_cup_11b_2015_03_26.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__nz_ac_waikato_cms_weka_thirdparty_java_cup_11b_runtime_2015_03_26.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__nz_ac_waikato_cms_weka_weka_stable_3_8_0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/App/MyControlPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App/MyControlPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CytoVisProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CytoVisProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Action/KMeansClustering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Action/KMeansClustering.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Action/KMeansClustering$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Action/KMeansClustering$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Action/KMeansClustering.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Action/KMeansClustering.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/App/MyControlPanel$45.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/App/MyControlPanel$45.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/App/MyControlPanel$46.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/App/MyControlPanel$46.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/App/MyControlPanel$47.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/App/MyControlPanel$47.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/App/MyControlPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/App/MyControlPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Util/FilterUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Util/FilterUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Util/MathUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Util/MathUtil.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/original-CytoVisProject-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-CytoVisProject-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
@@ -28,13 +51,16 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Action/KMeansClustering.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="94" column="17" lean-forward="true" selection-start-line="94" selection-start-column="17" selection-end-line="94" selection-end-column="17" />
+            <state relative-caret-position="649">
+              <caret line="322" column="62" selection-start-line="322" selection-start-column="62" selection-end-line="322" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -43,10 +69,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Action/EntityBasedSortingTask.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Util/MathUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="99" column="102" lean-forward="true" selection-start-line="99" selection-start-column="102" selection-end-line="99" selection-end-column="102" />
+            <state relative-caret-position="90">
+              <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1023#1024#0" expanded="true" />
+                <element signature="e#1060#1061#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -54,8 +85,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/META-INF/MANIFEST.MF">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="33" lean-forward="true" selection-end-line="6" />
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/App/MyControlPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="311">
+              <caret line="1171" column="24" selection-start-line="1171" selection-start-column="16" selection-end-line="1171" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -71,36 +111,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getatt</find>
-      <find>system.out.print</find>
-      <find>atte</find>
-      <find>getbackwardprovenance</find>
-      <find>getbackward</find>
-      <find>nodepair.put(</find>
-      <find>edgeType</find>
-      <find>1n</find>
-      <find>total</find>
-      <find>threshold</find>
-      <find>createatt</find>
-      <find />
-      <find>compareAllProperties</find>
-      <find>threshold.setEnabled</find>
-      <find>minThreshold.setEnabled</find>
-      <find>comparebut</find>
-      <find>comparegraphsbutton.add</find>
-      <find>determine</find>
-      <find>connectivityArray</find>
-      <find>resultlist:</find>
-      <find>Process_1064870</find>
-      <find>brutefore</find>
-      <find>sortactivit</find>
       <find>incident</find>
       <find>interaction</find>
       <find>updateState</find>
       <find>clusteringSpinner</find>
       <find>startcluster</find>
       <find>clustering</find>
+      <find>.csv</find>
+      <find>extractb</find>
+      <find>extractFilesButton</find>
+      <find>start clu</find>
+      <find>startClusteringButton</find>
+      <find>system.o</find>
+      <find>showmess</find>
+      <find>applykme</find>
+      <find>mergeNearestClusters</find>
+      <find>calculateDistance</find>
       <find>TRESHOLD</find>
+      <find>getnodeid</find>
+      <find>calculatedistance</find>
+      <find>getallnode</find>
+      <find>getallnodes</find>
+      <find>applykm</find>
+      <find>/</find>
+      <find>recal</find>
+      <find>merge&quot;</find>
+      <find>jopt</find>
+      <find>distance:</find>
+      <find>appl</find>
+      <find>allNodes</find>
+      <find>Kmeanscl</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -115,8 +155,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/Base/SliderVisualization.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Base/NodeSelectedListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/Action/SliderVisualization.java" />
         <option value="$PROJECT_DIR$/src/main/java/Action/ShowOnlyTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/Action/MyActionListener.java" />
@@ -143,7 +181,6 @@
         <option value="$PROJECT_DIR$/src/main/java/Base/EdgeAddedListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/Action/EntityBasedSortingTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/Base/DataImportListener.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/Base/GroupEdgesAddedListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/Base/DataImportFinishedListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/App/CytoVisProject.java" />
@@ -152,7 +189,6 @@
         <option value="$PROJECT_DIR$/src/main/java/Base/ProvoImportCore.java" />
         <option value="$PROJECT_DIR$/src/main/java/Action/ImportEdgesAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/Action/ExtractEdgesNodesTask.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Util/FilterUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/Util/BackwardDependency.java" />
         <option value="$PROJECT_DIR$/src/main/java/Action/ImportEdgesRightClickAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/Action/DrawComparedGraphs.java" />
@@ -161,10 +197,14 @@
         <option value="$PROJECT_DIR$/src/main/java/Util/EnhancedVersionOfBDM.java" />
         <option value="$PROJECT_DIR$/src/main/java/Base/EdgesAddedListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/Util/Subscriber.java" />
-        <option value="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
         <option value="$PROJECT_DIR$/src/main/java/Base/CompareGraphsCore.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/Util/MathUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Util/FilterUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/App/MyControlPanel.java" />
+        <option value="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+        <option value="$PROJECT_DIR$/src/main/java/Action/KMeansClusteringV2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Action/KMeansClusteringV.java" />
         <option value="$PROJECT_DIR$/src/main/java/Action/KMeansClustering.java" />
       </list>
     </option>
@@ -176,11 +216,11 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="271" />
-    <option name="y" value="104" />
-    <option name="width" value="1647" />
-    <option name="height" value="943" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="293" />
+    <option name="y" value="53" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -191,6 +231,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -224,30 +265,22 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="Action" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Cytoscape_Kafka_Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Cytoscape_Kafka_Project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Util" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="mani&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/META-INF/MANIFEST.MF&#10;manifest&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/META-INF/MANIFEST.MF&#10;manife&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/META-INF/MANIFEST.MF&#10;man&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/META-INF/MANIFEST.MF&#10;my&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/src/main/java/App/MyControlPanel.java&#10;manif&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/META-INF/MANIFEST.MF&#10;manifes&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/META-INF/MANIFEST.MF&#10;edgeadded&#9;PSI&#9;JAVA://Base.EdgesAddedListener&#10;mycon&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/src/main/java/App/MyControlPanel.java&#10;imported&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/src/main/java/Action/ImportEdgesRightClickAction.java&#10;entity&#9;PSI&#9;JAVA://Action.EntityBasedSortingTask&#10;show&#9;PSI&#9;JAVA://Action.ShowOnlyTask&#10;mam&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/META-INF/MANIFEST.MF&#10;myco&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/src/main/java/App/MyControlPanel.java&#10;edge&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/src/main/java/Action/ImportEdgesAction.java&#10;pom&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/pom.xml&#10;tableset&#9;FILE&#9;file:///home/erkan/Desktop/real-time-provenance-visualization/Cytoscape_Kafka_Project/src/main/java/Base/TableSetListener.java&#10;;&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549917765311" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../opm-to-provo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.33333334" />
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
@@ -298,12 +331,14 @@
       </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <properties />
       <listeners />
@@ -422,16 +457,37 @@
       <workItem from="1548604544169" duration="606000" />
       <workItem from="1548962157122" duration="108000" />
       <workItem from="1549909162095" duration="8323000" />
+      <workItem from="1560001428304" duration="478000" />
+      <workItem from="1560277092277" duration="100000" />
+      <workItem from="1560444418827" duration="3065000" />
+      <workItem from="1560586479799" duration="11000" />
+      <workItem from="1560973595028" duration="2251000" />
+      <workItem from="1561052200294" duration="3679000" />
+      <workItem from="1561056223676" duration="3778000" />
+      <workItem from="1561144403711" duration="2744000" />
+      <workItem from="1561148075701" duration="235000" />
+      <workItem from="1561149436936" duration="223000" />
+      <workItem from="1561212812806" duration="11527000" />
+      <workItem from="1561235471232" duration="4919000" />
+      <workItem from="1561661422842" duration="611000" />
+      <workItem from="1561894587336" duration="6789000" />
+      <workItem from="1561901951122" duration="59000" />
+      <workItem from="1561921428106" duration="16000" />
+      <workItem from="1561922026880" duration="1315000" />
+      <workItem from="1562698825625" duration="17000" />
+      <workItem from="1562869617612" duration="2716000" />
+      <workItem from="1563040984796" duration="2117000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="300261000" />
+    <option name="totallyTimeSpent" value="346915000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="1055" extended-state="7" />
+    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18539014" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18649696" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -451,7 +507,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32993197" />
       <window_info anchor="bottom" id="Sequence" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5008095" side_tool="true" weight="0.32910052" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4991905" weight="0.2973545" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4991905" weight="0.29697624" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
@@ -468,7 +524,7 @@
       <window_info anchor="right" id="Maven" order="10" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17916891" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2097399" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -487,13 +543,14 @@
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32993197" />
       <window_info anchor="bottom" id="Sequence" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5008095" side_tool="true" visible="true" weight="0.32910052" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4991905" weight="0.2973545" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5008095" side_tool="true" weight="0.32910052" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4991905" weight="0.29697624" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24986508" />
       <window_info anchor="right" id="PlantUML" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
@@ -501,6 +558,7 @@
       <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="Maven" order="10" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -723,13 +781,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Util/FilterUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1155">
-          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Base/CompareGraphsCore.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
@@ -748,42 +799,99 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Action/ShowHideEntityRelationAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="71" column="24" selection-start-line="71" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="53" column="40" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/lang/Throwable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="82" column="18" selection-start-line="82" selection-start-column="18" selection-end-line="82" selection-end-column="18" />
+          <folding>
+            <element signature="e#2811#2812#0" expanded="true" />
+            <element signature="e#2852#2853#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Base/ProvoImportCore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Action/EntityBasedSortingTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1305">
+          <caret line="99" column="102" selection-start-line="99" selection-start-column="102" selection-end-line="99" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/util/jar/Manifest.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Util/FilterUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Util/MathUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+        <state relative-caret-position="90">
+          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
           <folding>
-            <element signature="e#688#689#0" expanded="true" />
-            <element signature="e#725#726#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1023#1024#0" expanded="true" />
+            <element signature="e#1060#1061#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Action/KMeansClustering.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="103" selection-start-line="103" selection-end-line="103" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/App/MyControlPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1172" column="114" selection-start-line="1172" selection-start-column="114" selection-end-line="1172" selection-end-column="114" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Action/EntityBasedSortingTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="99" column="102" lean-forward="true" selection-start-line="99" selection-start-column="102" selection-end-line="99" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/META-INF/MANIFEST.MF">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="33" lean-forward="true" selection-end-line="6" />
+        <state relative-caret-position="311">
+          <caret line="1171" column="24" selection-start-line="1171" selection-start-column="16" selection-end-line="1171" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Action/KMeansClustering.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="94" column="17" lean-forward="true" selection-start-line="94" selection-start-column="17" selection-end-line="94" selection-end-column="17" />
+        <state relative-caret-position="649">
+          <caret line="322" column="62" selection-start-line="322" selection-start-column="62" selection-end-line="322" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -850,7 +958,6 @@
             <option name="proportions">
               <list>
                 <option value="0.33333334" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
