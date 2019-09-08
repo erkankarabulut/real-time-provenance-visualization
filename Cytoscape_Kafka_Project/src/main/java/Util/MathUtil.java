@@ -4,6 +4,7 @@ import org.cytoscape.app.swing.CySwingAppAdapter;
 
 import javax.swing.*;
 import java.util.Arrays;
+import java.util.List;
 
 public class MathUtil {
 
@@ -41,5 +42,17 @@ public class MathUtil {
         return Arrays.stream(numbers)
                 .min().orElse(Integer.MAX_VALUE);
     }
+
+    public float entropy(int totalClassCount, List<Integer> classCountList){
+        float entropy = 1;
+
+        for (Integer count : classCountList){
+            entropy = entropy + ((count/totalClassCount) * ((Double) (Math.log(count/totalClassCount)/Math.log(2)) ).floatValue());
+        }
+
+        return entropy;
+    }
+
+
 
 }

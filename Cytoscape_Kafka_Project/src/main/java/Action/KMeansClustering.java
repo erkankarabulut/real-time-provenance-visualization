@@ -6,9 +6,16 @@ import org.cytoscape.app.swing.CySwingAppAdapter;
 import org.cytoscape.application.CyApplicationManager;
 import org.cytoscape.model.CyNetwork;
 import org.cytoscape.model.CyNode;
+import org.cytoscape.model.CyRow;
 import org.cytoscape.model.CyTable;
 import org.cytoscape.view.model.CyNetworkView;
 import org.cytoscape.view.presentation.property.BasicVisualLexicon;
+import weka.attributeSelection.AttributeSelection;
+import weka.attributeSelection.InfoGainAttributeEval;
+import weka.attributeSelection.Ranker;
+import weka.core.Attribute;
+import weka.core.DenseInstance;
+import weka.core.Instances;
 
 import javax.swing.*;
 import java.util.*;
@@ -46,6 +53,7 @@ public class KMeansClustering {
         ArrayList<ArrayList<String>> clusters = new ArrayList<>();              // Stores cluster names(names are actually represents id values)
         ArrayList<ArrayList<Integer>> clusterCentroids = new ArrayList<>();     // Numeric centroid values of clusters
 
+        applyInformationGain();
         try {
             int totalClusterCount = 0;  // total cluster count
             Iterator<String> keyIterator = allNodes.keySet().iterator();        // get all keys(names) from nodes
@@ -83,10 +91,16 @@ public class KMeansClustering {
         return clusters;
     }
 
-    /*
-        public ArrayList<Integer> applyInformationGain(){
+    /**
+     * This method is used to apply information gain for the dataset which is currently loaded into Cytoscape
+     *
+     * @return columns with high info gain
+     * */
+    public ArrayList<Integer> applyInformationGain(){
+        // List of column indexes with high info gain
         ArrayList<Integer> columnsWithHighInfoGain = new ArrayList<>();
 
+        // Creating Weka's necessary objects for info gain calculation
         AttributeSelection attributeSelection = new AttributeSelection();
         InfoGainAttributeEval infoGainAttributeEval = new InfoGainAttributeEval();
         Ranker search = new Ranker();
@@ -94,51 +108,56 @@ public class KMeansClustering {
         attributeSelection.setSearch(search);
 
         ArrayList<Attribute> attributes = new ArrayList<>();
+        // There are 6 different classes, (max cluster count)
         ArrayList<String> classValues = new ArrayList<String>(){{
-            add("A");
-            add("B");
-            add("C");
-            add("D");
-            add("E");
-            add("F");
+            add("1");
+            add("2");
+            add("3");
+            add("4");
+            add("5");
+            add("6");
         }};
 
+        // getting attributes from "table"(CyTable) object of Cytoscape.
         Set<String> attributeNames = table.getAllRows().get(1).getAllValues().keySet();
+        // for each attribute, create an Attribute object of Weka with an empty list
         Iterator<String> attributeNamesIterator = attributeNames.iterator();
         while (attributeNamesIterator.hasNext()){
             attributes.add(new Attribute(attributeNamesIterator.next(), new ArrayList<>()));
         }
-
+        // add class values?
         attributes.add(new Attribute("@@class@@", classValues));
         try {
-
-            Instances dataSet = new Instances("TestInstances", attributes, 0);
+            // create empty instances
+            Instances dataSet = new Instances("DataInstances", attributes, 0);
+            // fill instances object
             int rowCounter = 0;
             for(CyRow row : table.getAllRows()){
+                // get all values for each row
                 Map<String, Object> rowValue = row.getAllValues();
                 double[] instanceValues = new double[dataSet.numAttributes()];
                 for(Object rowElement : rowValue.values()){
+                    // fill a double array with the values that collected above
                     instanceValues[rowCounter] = dataSet.attribute(rowCounter).addStringValue(rowElement == null ? (String) null : rowElement.toString());
                     rowCounter++;
                 }
-
-                instanceValues[rowCounter] = dataSet.attribute(rowCounter).addStringValue("A");
+                // add a new instance to instances object
                 dataSet.add(new DenseInstance(1.0, instanceValues));
                 rowCounter = 0;
             }
-
+            // select attributes according to info gain
             attributeSelection.SelectAttributes(dataSet);
 
+            // finally, rank them
             double[][] attrRanks = attributeSelection.rankedAttributes();
         }catch (Exception e ){
             JOptionPane.showMessageDialog(adapter.getCySwingApplication().getJFrame(),
                     e.getMessage() + " - " + e.toString(),
-                    "Attribute Ranks", JOptionPane.INFORMATION_MESSAGE);
+                    "Error!", JOptionPane.INFORMATION_MESSAGE);
         }
 
         return columnsWithHighInfoGain;
     }
-    */
 
     // This method is used to calculate centroid of a given cluster
     // @param cluster: Contains names of elements of that cluster
