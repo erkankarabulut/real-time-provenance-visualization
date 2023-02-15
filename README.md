@@ -1,4 +1,4 @@
-# Real-time PROV-O Visualization
+# Real-time PROV-O Visualization (2018)
 
 This is a Cytoscape[1] plugin that provides real-time PROV-O[2] data visualization capabilities. It is developed as part of my undergraduate student assistantship at the Software Quality R&D Lab, Yildiz Technical University[3], between 2016 and 2018.
 
