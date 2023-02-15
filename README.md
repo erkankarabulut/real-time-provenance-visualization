@@ -13,7 +13,7 @@ The main goal of the project is; i) to convert OPM[4] data to PROV-O, ii) to pro
 - Comparing provenance data graphs for detecting similarities or finding anomalies
 
 ## How to Run?
-Please see the [tutorial](https://github.com/erkankarabulut/real-time-provenance-visualization/blob/master/doc/Tutorial.docx) for more detailed information about how to install, run and use the plugin.
+Please see the [tutorial](https://github.com/erkankarabulut/real-time-provenance-visualization/blob/master/doc/Tutorial.pdf) for more detailed information about how to install, run and use the plugin.
 
 ### Related Publication(s)
 [A] Yazici, Ilkay Melek, Erkan Karabulut, and Mehmet S. Aktas. "A data provenance visualization approach." 2018 14th International Conference on Semantics, Knowledge and Grids (SKG). IEEE, 2018.
